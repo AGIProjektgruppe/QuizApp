@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="de.fhdw.devgroup.quizapp.sortingquestion.ActivityInit"></activity>
+        <activity android:name="de.fhdw.devgroup.quizapp.multiquestion.ActivityInit"></activity>
     </application>
 
 </manifest>
