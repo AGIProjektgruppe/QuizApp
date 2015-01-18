@@ -18,6 +18,7 @@ public class ActivityEventToListenerMapping implements OnClickListener {
 		mGUI.getAnswerButton2().setOnClickListener(this);
 		mGUI.getAnswerButton3().setOnClickListener(this);
 		mGUI.getAnswerButton4().setOnClickListener(this);
+		mGUI.getSubmit().setOnClickListener(this);
 		
 	}
 

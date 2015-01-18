@@ -15,6 +15,10 @@ public class ActivityInit extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sortingquestion);
+        initData(savedInstanceState);
+		initGUI();
+		initApplicationLogic();
+		initEventToListenerMapping();
     }
 
 
@@ -27,7 +31,7 @@ public class ActivityInit extends Activity {
 	}
 
 	private void initApplicationLogic() {
-		mApplicationLogic = new ActivityApplicationLogic(mData, mGUI);
+		mApplicationLogic = new ActivityApplicationLogic(mData, mGUI, this);
 	}
 	
 	private void initEventToListenerMapping() {

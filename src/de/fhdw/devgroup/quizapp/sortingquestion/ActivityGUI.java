@@ -11,6 +11,7 @@ public class ActivityGUI {
 	private Button mAnswerButton2;
 	private Button mAnswerButton3;
 	private Button mAnswerButton4;
+	private Button mSubmit;
 	
 	private TextView mPosition1;
 	private TextView mPosition2;
@@ -25,6 +26,8 @@ public class ActivityGUI {
 		mAnswerButton2 = (Button) activityInit.findViewById(R.id.answer2);
 		mAnswerButton3 = (Button) activityInit.findViewById(R.id.answer3);
 		mAnswerButton4 = (Button) activityInit.findViewById(R.id.answer4);
+		setSubmit((Button) activityInit.findViewById(R.id.submit));
+		
 		mPosition1 = (TextView) activityInit.findViewById(R.id.position1);
 		mPosition2 = (TextView) activityInit.findViewById(R.id.position2);
 		mPosition3 = (TextView) activityInit.findViewById(R.id.position3);
@@ -77,6 +80,18 @@ public class ActivityGUI {
 
 	public TextView getPosition4() {
 		return mPosition4;
+	}
+
+
+
+	public Button getSubmit() {
+		return mSubmit;
+	}
+
+
+
+	public void setSubmit(Button mSubmit) {
+		this.mSubmit = mSubmit;
 	}
 
 

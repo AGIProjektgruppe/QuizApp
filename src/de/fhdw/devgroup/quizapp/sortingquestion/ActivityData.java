@@ -6,6 +6,8 @@ import de.fhdw.devgroup.quizapp.constants.*;
 public class ActivityData {
 
 	private int mPosition;
+	private int mSolution[] = {4,2,3,1};
+	private int providedSolution[];
 	private ActivityInit mActivity;
 
 	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit) {
@@ -17,16 +19,20 @@ public class ActivityData {
 		else {
 			restoreDataFromBundle(savedInstanceState);
 		}
+		providedSolution = new int[4];
+		//mSolution = new int[4];
+		
 	}
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
 		mPosition = savedInstanceState.getInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION);
-		
+		providedSolution = savedInstanceState.getIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION);
 	}
 
 	public void saveDataInBundle(Bundle outState) {
 		
 		outState.putInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION, mPosition);
+		outState.putIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION, providedSolution);
 	}
 	
 	
@@ -41,6 +47,11 @@ public class ActivityData {
 		}
 	}
 	
+	public void saveCurrentSolution(int index, int pos){
+		
+		providedSolution[index] = pos;
+	}
+	
 	// Getter
 	public int getPosition() {
 		return mPosition;
@@ -48,6 +59,34 @@ public class ActivityData {
 	
 	public ActivityInit getActivity() {
 		return mActivity;
+	}
+
+	/**
+	 * @return the result
+	 */
+	public int[] getSolution() {
+		return mSolution;
+	}
+
+	/**
+	 * @return the providedSolution
+	 */
+	public int[] getProvidedSolution() {
+		return providedSolution;
+	}
+
+	/**
+	 * @param result the result to set
+	 */
+	public void setSolution(int[] result) {
+		this.mSolution = result;
+	}
+
+	/**
+	 * @param providedSolution the providedSolution to set
+	 */
+	public void setProvidedSolution(int[] providedSolution) {
+		this.providedSolution = providedSolution;
 	}
 
 	//Setter

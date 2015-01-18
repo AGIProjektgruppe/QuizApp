@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="de.fhdw.devgroup.quizapp.ActivityMain" >
+    tools:context="de.fhdw.devgroup.quizapp.sortingquestion.ActivityInit" >
 
     <TextView
         android:id="@+id/questionText"
@@ -22,16 +22,16 @@
 
         <TextView
             android:id="@+id/position1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            
+            android:layout_weight="1"
             android:text="@string/number_placeholder" />
 
         <Button
             android:id="@+id/answer1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            
+            android:layout_weight="5"
             android:text="@string/answer_placeholder" />
     </LinearLayout>
 
@@ -41,14 +41,16 @@
 
         <TextView
             android:id="@+id/position2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/number_placeholder" />
 
         <Button
             android:id="@+id/answer2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text="@string/answer_placeholder" />
     </LinearLayout>
 
@@ -58,14 +60,16 @@
 
         <TextView
             android:id="@+id/position3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/number_placeholder" />
 
         <Button
             android:id="@+id/answer3"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text="@string/answer_placeholder" />
     </LinearLayout>
 
@@ -75,19 +79,21 @@
 
         <TextView
             android:id="@+id/position4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/number_placeholder" />
 
         <Button
             android:id="@+id/answer4"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text="@string/answer_placeholder" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit" />
