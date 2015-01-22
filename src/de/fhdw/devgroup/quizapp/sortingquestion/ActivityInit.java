@@ -2,7 +2,9 @@ package de.fhdw.devgroup.quizapp.sortingquestion;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 
 
 public class ActivityInit extends Activity {
@@ -14,11 +16,19 @@ public class ActivityInit extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("Create","Succesfully Created");
         setContentView(R.layout.activity_sortingquestion);
+        //QuestionManager.insertQuestions(this);
         initData(savedInstanceState);
 		initGUI();
 		initApplicationLogic();
 		initEventToListenerMapping();
+    }
+    @Override
+    protected void onResume(){
+    	super.onResume();
+    	
+    	
     }
 
 
@@ -43,4 +53,6 @@ public class ActivityInit extends Activity {
 		mData.saveDataInBundle(outState);
 		super.onSaveInstanceState(outState);
 	}
+	
+	
 }

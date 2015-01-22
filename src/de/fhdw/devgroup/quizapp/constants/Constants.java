@@ -5,7 +5,7 @@ public class Constants {
 	//General Constants
 	public static final String KEY_POSTIONVALUE_SORTINGQUESTION = "K1_0";
 	public static final String KEY_SOLUTIONARRAY_SORTINGQUESTION = "K1_1";
-	public static final Class<?> ACTIVITYEDITCLASS = de.fhdw.devgroup.quizapp.sortingquestion.ActivityInit.class;
+	public static final Class<?> ACTIVITYSORTINGCLASS = de.fhdw.devgroup.quizapp.sortingquestion.ActivityInit.class;
 	public static final Class<?> ACTIVITYMULTICLASS = de.fhdw.devgroup.quizapp.multiquestion.ActivityInit.class;
 	
 

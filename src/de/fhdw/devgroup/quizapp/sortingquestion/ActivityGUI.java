@@ -1,11 +1,13 @@
 package de.fhdw.devgroup.quizapp.sortingquestion;
 
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import de.fhdw.devgroup.quizapp.R;
 
 public class ActivityGUI {
 
+	private TextView mQuestionText;
 	
 	private Button mAnswerButton1;
 	private Button mAnswerButton2;
@@ -21,6 +23,8 @@ public class ActivityGUI {
 	
 	
 	public ActivityGUI(ActivityInit activityInit) {
+		Log.d("GUI","Succesfully Created GUI");
+		setQuestionText((TextView) activityInit.findViewById(R.id.questionText));
 		
 		mAnswerButton1 = (Button) activityInit.findViewById(R.id.answer1);
 		mAnswerButton2 = (Button) activityInit.findViewById(R.id.answer2);
@@ -86,6 +90,18 @@ public class ActivityGUI {
 
 	public Button getSubmit() {
 		return mSubmit;
+	}
+
+
+
+	public TextView getQuestionText() {
+		return mQuestionText;
+	}
+
+
+
+	public void setQuestionText(TextView mQuestionText) {
+		this.mQuestionText = mQuestionText;
 	}
 
 

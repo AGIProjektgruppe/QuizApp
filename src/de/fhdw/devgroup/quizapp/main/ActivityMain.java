@@ -27,7 +27,7 @@ public class ActivityMain extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Intent intent = new Intent();
-        intent.setClass(this, Constants.ACTIVITYMULTICLASS);
+        intent.setClass(this, Constants.ACTIVITYSORTINGCLASS);
         startActivity(intent);
 	}
 

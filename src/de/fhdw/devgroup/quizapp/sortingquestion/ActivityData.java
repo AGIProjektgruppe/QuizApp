@@ -1,12 +1,18 @@
 package de.fhdw.devgroup.quizapp.sortingquestion;
 
 import android.os.Bundle;
-import de.fhdw.devgroup.quizapp.constants.*;
+import android.util.Log;
+import de.fhdw.devgroup.quizapp.constants.Constants;
+import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
+import de.fhdw.devgroup.quizapp.utilities.Shuffler;
 
 public class ActivityData {
 
 	private int mPosition;
-	private int mSolution[] = {4,2,3,1};
+	private String[][] shuffeldQuestionData;
+	private String[] answers;
+	private int[] mSolution;
+	private String mQuestionText;
 	private int providedSolution[];
 	private ActivityInit mActivity;
 
@@ -15,18 +21,27 @@ public class ActivityData {
 		setActivity(activityInit);
 		if ( savedInstanceState == null ) {  // no data to restore
 			mPosition = 1;   // use default
+			providedSolution = new int[4];
+			mSolution = new int[4];
+			shuffeldQuestionData = new String[4][2];
+			answers = new String[4];
+			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1"));
 		}
 		else {
 			restoreDataFromBundle(savedInstanceState);
 		}
-		providedSolution = new int[4];
-		//mSolution = new int[4];
+		
+		
+
+		
 		
 	}
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
 		mPosition = savedInstanceState.getInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION);
 		providedSolution = savedInstanceState.getIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION);
+		
+		
 	}
 
 	public void saveDataInBundle(Bundle outState) {
@@ -34,8 +49,24 @@ public class ActivityData {
 		outState.putInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION, mPosition);
 		outState.putIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION, providedSolution);
 	}
+	 
 	
-	
+	public void extractInformationFromDBQuery(String[] queryresult){
+		setQuestionText(queryresult[0]);
+		String temp = queryresult[1];
+		String tempParts[] = temp.split(",");
+		Log.d("Data","Splitting done");
+		shuffeldQuestionData = Shuffler.shuffleStringArray(tempParts);
+		Log.d("Data","Shuffeling done");
+		for(int i = 0; i< shuffeldQuestionData.length; i++ ){
+			
+			mSolution[i] = Integer.parseInt(shuffeldQuestionData[i][0]);
+			
+			answers[i]=shuffeldQuestionData[i][1];
+			
+		}
+		
+	}
 	public void nextPosition() {
 		mPosition++;
 	}
@@ -76,6 +107,20 @@ public class ActivityData {
 	}
 
 	/**
+	 * @return the answers
+	 */
+	public String getAnswers(int index) {
+		return answers[index];
+	}
+
+	/**
+	 * @param answers the answers to set
+	 */
+	public void setAnswers(String[] answers) {
+		this.answers = answers;
+	}
+
+	/**
 	 * @param result the result to set
 	 */
 	public void setSolution(int[] result) {
@@ -96,6 +141,14 @@ public class ActivityData {
 
 	public void setActivity(ActivityInit mActivity) {
 		this.mActivity = mActivity;
+	}
+
+	public String getQuestionText() {
+		return mQuestionText;
+	}
+
+	public void setQuestionText(String mQuestionText) {
+		this.mQuestionText = mQuestionText;
 	}
 
 }
