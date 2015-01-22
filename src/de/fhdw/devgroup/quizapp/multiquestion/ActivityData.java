@@ -38,12 +38,12 @@ public class ActivityData {
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
 		//TODO make own constants for this type of question ?? dont know if this is necessary
-		providedSolution = savedInstanceState.getIntegerArrayList(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION);
+		providedSolution = savedInstanceState.getIntegerArrayList(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION);
 	}
 
 	public void saveDataInBundle(Bundle outState) {	
 		//TODO make own constants for this type of question ?? dont know if this is necessary
-		outState.putIntegerArrayList(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION, providedSolution);
+		outState.putIntegerArrayList(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION, providedSolution);
 	}
 	
 	public ActivityInit getActivity() {

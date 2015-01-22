@@ -12,6 +12,7 @@ public class ActivityApplicationLogic {
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
+	private int mPosition; 
 	
 	
 	public ActivityApplicationLogic(ActivityData mData, ActivityGUI mGUI, ActivityInit mActivity) {
@@ -20,6 +21,7 @@ public class ActivityApplicationLogic {
 		this.mData = mData;
 		this.mGUI = mGUI;
 		
+		mData.getPosition();
 		mGUI.getQuestionText().setText(mData.getQuestionText());
 		mGUI.getAnswerButton1().setText(mData.getAnswers(0));
 		mGUI.getAnswerButton2().setText(mData.getAnswers(1));

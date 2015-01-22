@@ -27,8 +27,9 @@ public class ActivityData {
 			answers = new String[4];
 			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1"));
 		}
-		else {
+		else { 
 			restoreDataFromBundle(savedInstanceState);
+			
 		}
 		
 		
@@ -39,15 +40,18 @@ public class ActivityData {
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
 		mPosition = savedInstanceState.getInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION);
-		providedSolution = savedInstanceState.getIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION);
-		
+		providedSolution = savedInstanceState.getIntArray(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION);
+		answers = savedInstanceState.getStringArray(Constants.KEY_ANSWERSARRAY_SORTINGQUESTION);
+		mSolution = savedInstanceState.getIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION);
 		
 	}
 
 	public void saveDataInBundle(Bundle outState) {
 		
 		outState.putInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION, mPosition);
-		outState.putIntArray(Constants.KEY_SOLUTIONARRAY_SORTINGQUESTION, providedSolution);
+		outState.putIntArray(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION, providedSolution);
+		outState.putStringArray(Constants.KEY_ANSWERSARRAY_SORTINGQUESTION, answers);
+		outState.putIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION, mSolution);
 	}
 	 
 	
