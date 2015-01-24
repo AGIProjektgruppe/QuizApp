@@ -1,10 +1,9 @@
 package de.fhdw.quizappfragentypbild.type.two;
 
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import de.fhdw.quizappfragentyp.R;
+import de.fhdw.devgroup.quizapp.R;
 
 public class ActivityGUI {
 	

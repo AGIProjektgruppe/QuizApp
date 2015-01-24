@@ -2,7 +2,7 @@ package de.fhdw.quizappfragentypbild.type.two;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import de.fhdw.quizappfragentyp.R;
+import de.fhdw.devgroup.quizapp.R;
 
 public class ActivityEventToListenerMapping  implements OnClickListener{
 	
