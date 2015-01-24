@@ -10,7 +10,7 @@ public class QuestionManager {
 	public static void insertQuestions(Activity act ){
 		DatabaseManager dbManager = new DatabaseManager(act.getApplicationContext());
 		
-		//
+		
 		dbManager.insertSortingquestion("S1","Testfragetext, nur zum testen", "A,B,C,D");
 		
 	}
