@@ -18,7 +18,9 @@ public class ActivityInit extends Activity {
         super.onCreate(savedInstanceState);
         Log.d("Create","Succesfully Created");
         setContentView(R.layout.activity_sortingquestion);
-        QuestionManager.insertQuestions(this);
+
+			//QuestionManager.insertQuestions(this);
+		
         initData(savedInstanceState);
 		initGUI();
 		initApplicationLogic();

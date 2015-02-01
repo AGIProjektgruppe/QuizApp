@@ -19,7 +19,7 @@ public class ActivityGUI {
 		
 		mImage = (ImageView) act.findViewById(R.id.imageViewt2);
 		mText = (TextView) act.findViewById(R.id.question_text);
-		mButton1 = (Button) act.findViewById(R.id.highscore);
+		mButton1 = (Button) act.findViewById(R.id.button1);
 		mButton2 = (Button) act.findViewById(R.id.button2);
 		mButton3 = (Button) act.findViewById(R.id.button3);
 		mButton4 = (Button) act.findViewById(R.id.button4);
