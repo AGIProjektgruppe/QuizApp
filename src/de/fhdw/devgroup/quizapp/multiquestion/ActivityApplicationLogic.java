@@ -2,11 +2,12 @@ package de.fhdw.devgroup.quizapp.multiquestion;
 
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.Toast;
 import de.fhdw.devgroup.quizapp.R;
-
+import de.fhdw.devgroup.quizapp.constants.Constants;
 
 /**
  * 
@@ -125,7 +126,7 @@ public class ActivityApplicationLogic {
 		}
 		
 		if(!correct){
-        	Toast.makeText(mActivity.getApplicationContext(), "You are wrong! New question, new luck!", Toast.LENGTH_LONG).show();
+        	Toast.makeText(mActivity.getApplicationContext(), "You are wrong! New question, new luck!", Toast.LENGTH_SHORT).show();
         	
         	//TODO read and use it or delete it
         	//if each single answer that fits counts, count correct answers
@@ -138,14 +139,16 @@ public class ActivityApplicationLogic {
         	//}
 		}
 		else{
-			Toast.makeText(mActivity.getApplicationContext(), "Woohooo! You are right! Go on with the next question.", Toast.LENGTH_LONG).show();
+			Toast.makeText(mActivity.getApplicationContext(), "Woohooo! You are right! Go on with the next question.", Toast.LENGTH_SHORT).show();
 
 			//give score for the correct answer and selection
 			//TODO add scoring
 			//addToScore(highestPossiblePointsForThisQuestion);
 		}
 		
-		//TODO open next question
+		Intent intent = new Intent();
+        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
+        mData.getActivity().startActivity(intent);
 	}
 	
 	public void refreshGUI(){

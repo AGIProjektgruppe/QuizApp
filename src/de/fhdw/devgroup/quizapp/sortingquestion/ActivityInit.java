@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
 import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 
 public class ActivityInit extends Activity {
 	
@@ -18,7 +22,9 @@ public class ActivityInit extends Activity {
         super.onCreate(savedInstanceState);
         Log.d("Create","Succesfully Created");
         setContentView(R.layout.activity_sortingquestion);
-        //QuestionManager.insertQuestions(this);
+
+			//QuestionManager.insertQuestions(this);
+		
         initData(savedInstanceState);
 		initGUI();
 		initApplicationLogic();

@@ -10,7 +10,24 @@ package de.fhdw.devgroup.quizapp;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int aqua=0x7f040007;
+        public static final int dark_blue=0x7f040001;
+        public static final int dark_gray=0x7f04000a;
+        public static final int green=0x7f040008;
+        public static final int lavender=0x7f040005;
+        public static final int light_blue=0x7f040000;
+        public static final int light_gray=0x7f04000c;
+        public static final int mauve=0x7f040002;
+        public static final int mustard=0x7f040009;
+        public static final int orange=0x7f040004;
+        public static final int pink=0x7f04000b;
+        public static final int purple=0x7f040006;
+        public static final int red=0x7f040003;
+        public static final int white=0x7f04000d;
+    }
     public static final class dimen {
+        public static final int Standard_text_size=0x7f050002;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -18,43 +35,124 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int big_text=0x7f050003;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int custom_button_blue=0x7f020000;
+        public static final int custom_button_green=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int t1_question_1=0x7f020003;
+        public static final int t1_question_2=0x7f020004;
+        public static final int t1_question_3=0x7f020005;
+        public static final int t1_question_4=0x7f020006;
+        public static final int t1_question_5=0x7f020007;
+        public static final int t2_question_1=0x7f020008;
+        public static final int t2_question_2=0x7f020009;
+        public static final int t2_question_3=0x7f02000a;
+        public static final int t2_question_4=0x7f02000b;
+        public static final int t2_question_5=0x7f02000c;
+        public static final int t2_question_init=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
-        public static final int answer1=0x7f080004;
-        public static final int answer2=0x7f080006;
-        public static final int answer3=0x7f080008;
-        public static final int answer4=0x7f08000a;
-        public static final int parentLayout=0x7f080000;
-        public static final int position1=0x7f080003;
-        public static final int position2=0x7f080005;
-        public static final int position3=0x7f080007;
-        public static final int position4=0x7f080009;
-        public static final int questionText=0x7f080001;
-        public static final int start=0x7f080002;
-        public static final int submit=0x7f08000b;
+        public static final int LinearLayout1=0x7f09000d;
+        public static final int action_settings=0x7f09001d;
+        public static final int answer1=0x7f090004;
+        public static final int answer2=0x7f090005;
+        public static final int answer3=0x7f090006;
+        public static final int answer4=0x7f090007;
+        public static final int answer_textfield=0x7f09000b;
+        public static final int button1=0x7f090014;
+        public static final int button2=0x7f090015;
+        public static final int button3=0x7f090017;
+        public static final int button4=0x7f090018;
+        public static final int button_layout=0x7f090012;
+        public static final int button_layout_down=0x7f090016;
+        public static final int button_layout_up=0x7f090013;
+        public static final int confirm_button=0x7f09000c;
+        public static final int highscore=0x7f090003;
+        public static final int imageViewt1=0x7f090009;
+        public static final int imageViewt2=0x7f09000f;
+        public static final int parentLayout=0x7f090000;
+        public static final int picture_layout=0x7f09000e;
+        public static final int position1=0x7f090019;
+        public static final int position2=0x7f09001a;
+        public static final int position3=0x7f09001b;
+        public static final int position4=0x7f09001c;
+        public static final int questionText=0x7f090001;
+        public static final int question_text=0x7f090011;
+        public static final int start=0x7f090002;
+        public static final int submit=0x7f090008;
+        public static final int t1_question_text=0x7f09000a;
+        public static final int text_layout=0x7f090010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_sortingquestion=0x7f030001;
+        public static final int activity_multiquestion=0x7f030001;
+        public static final int activity_picturequestion_one=0x7f030002;
+        public static final int activity_picturequestion_two=0x7f030003;
+        public static final int activity_sortingquestion=0x7f030004;
     }
     public static final class menu {
-        public static final int activity_main=0x7f070000;
+        public static final int activity_main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int answer_placeholder=0x7f050006;
-        public static final int app_name=0x7f050000;
-        public static final int empty_string=0x7f050004;
-        public static final int hello_world=0x7f050001;
-        public static final int number_placeholder=0x7f050005;
-        public static final int question_text_placeholder=0x7f050003;
-        public static final int submit=0x7f050007;
+        public static final int action_settings=0x7f060028;
+        public static final int answer_placeholder=0x7f060033;
+        public static final int app_name=0x7f06002d;
+        public static final int button1_text=0x7f060029;
+        public static final int button2_text=0x7f06002a;
+        public static final int button3_text=0x7f06002b;
+        public static final int button4_text=0x7f06002c;
+        public static final int button_text=0x7f060002;
+        public static final int empty_string=0x7f060031;
+        public static final int hello_world=0x7f06002e;
+        public static final int highscore=0x7f060036;
+        public static final int number_placeholder=0x7f060032;
+        public static final int question_1_answer=0x7f060004;
+        public static final int question_1_answer_1=0x7f06000f;
+        public static final int question_1_answer_2=0x7f060010;
+        public static final int question_1_answer_3=0x7f060011;
+        public static final int question_1_answer_4=0x7f060012;
+        public static final int question_1_right_answer=0x7f060013;
+        public static final int question_1_text=0x7f060003;
+        public static final int question_2_answer=0x7f060006;
+        public static final int question_2_answer_1=0x7f060014;
+        public static final int question_2_answer_2=0x7f060015;
+        public static final int question_2_answer_3=0x7f060016;
+        public static final int question_2_answer_4=0x7f060017;
+        public static final int question_2_right_answer=0x7f060018;
+        public static final int question_2_text=0x7f060005;
+        public static final int question_3_answer=0x7f060008;
+        public static final int question_3_answer_1=0x7f060019;
+        public static final int question_3_answer_2=0x7f06001a;
+        public static final int question_3_answer_3=0x7f06001b;
+        public static final int question_3_answer_4=0x7f06001c;
+        public static final int question_3_right_answer=0x7f06001d;
+        public static final int question_3_text=0x7f060007;
+        public static final int question_4_answer=0x7f06000a;
+        public static final int question_4_answer_1=0x7f06001e;
+        public static final int question_4_answer_2=0x7f06001f;
+        public static final int question_4_answer_3=0x7f060020;
+        public static final int question_4_answer_4=0x7f060021;
+        public static final int question_4_right_answer=0x7f060022;
+        public static final int question_4_text=0x7f060009;
+        public static final int question_5_answer_1=0x7f060023;
+        public static final int question_5_answer_2=0x7f060024;
+        public static final int question_5_answer_3=0x7f060025;
+        public static final int question_5_answer_4=0x7f060026;
+        public static final int question_5_right_answer=0x7f060027;
+        public static final int question_5_text=0x7f06000b;
+        public static final int question_6_answer=0x7f06000c;
+        public static final int question_number_t1=0x7f060000;
+        public static final int question_number_t2=0x7f06000d;
+        public static final int question_text=0x7f06000e;
+        public static final int question_text_init=0x7f060001;
+        public static final int question_text_placeholder=0x7f06002f;
+        public static final int start_quiz=0x7f060035;
+        public static final int submit=0x7f060034;
+        public static final int welcome_text=0x7f060030;
     }
     public static final class style {
         /** 
@@ -78,10 +176,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
