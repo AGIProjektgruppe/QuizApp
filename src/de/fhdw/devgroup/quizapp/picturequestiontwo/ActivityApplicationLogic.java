@@ -6,7 +6,11 @@ import android.app.Activity;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityApplicationLogic extends Activity{
 	
 	private ActivityData mData;

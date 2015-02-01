@@ -3,6 +3,11 @@ package de.fhdw.devgroup.quizapp.picturequestionone;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityEventToListenerMapping  implements OnClickListener{
 	
 	private ActivityApplicationLogic mApplicationLogic;

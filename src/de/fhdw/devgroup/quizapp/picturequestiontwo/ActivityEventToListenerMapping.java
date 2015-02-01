@@ -4,6 +4,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import de.fhdw.devgroup.quizapp.R;
 
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityEventToListenerMapping  implements OnClickListener{
 	
 	private ActivityApplicationLogic mApplicationLogic;

@@ -2,6 +2,11 @@ package de.fhdw.devgroup.quizapp.picturequestionone;
 
 import android.os.Bundle;
 
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityData {
 	
 	private static final String ENTEREDSTRING = "K1";

@@ -2,6 +2,11 @@ package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
 import android.os.Bundle;
 
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityData {
 	
 	private ActivityInit mActivity;

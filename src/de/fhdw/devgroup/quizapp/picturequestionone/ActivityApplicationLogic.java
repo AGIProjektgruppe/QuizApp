@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-//hier ist noch ein fehler der zum memory overload führt, aber ich weiß nicht warum
-//aber an sich funktionierts
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityApplicationLogic {
 	
 	private ActivityData mData;

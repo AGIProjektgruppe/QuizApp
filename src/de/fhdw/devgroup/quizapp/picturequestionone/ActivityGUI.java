@@ -6,6 +6,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import de.fhdw.devgroup.quizapp.R;
 
+/**
+ * 
+ * @author Adrian Strzelczyk
+ *
+ */
 public class ActivityGUI {
 	
 	private ImageView mImage;
