@@ -43,6 +43,7 @@ public class ActivityApplicationLogic {
 			}
 			else {
 				mData.previousPosition(Integer.parseInt(mGUI.getPosition1().getText().toString()));
+				mData.saveCurrentSolution(0, 0);
 				mGUI.getPosition1().setText("0");
 				mGUI.getPosition1().setTextColor(Color.rgb(255,255,255));
 			}
@@ -57,6 +58,7 @@ public class ActivityApplicationLogic {
 			}
 			else {
 				mData.previousPosition(Integer.parseInt(mGUI.getPosition2().getText().toString()));
+				mData.saveCurrentSolution(1, 0);
 				mGUI.getPosition2().setText("0");
 				mGUI.getPosition2().setTextColor(Color.rgb(255,255,255));
 			}
@@ -71,6 +73,7 @@ public class ActivityApplicationLogic {
 			}
 			else {
 				mData.previousPosition(Integer.parseInt(mGUI.getPosition3().getText().toString()));
+				mData.saveCurrentSolution(2, 0);
 				mGUI.getPosition3().setText("0");
 				mGUI.getPosition3().setTextColor(Color.rgb(255,255,255));
 			}
@@ -85,6 +88,7 @@ public class ActivityApplicationLogic {
 			}
 			else {
 				mData.previousPosition(Integer.parseInt(mGUI.getPosition4().getText().toString()));
+				mData.saveCurrentSolution(3, 0);
 				mGUI.getPosition4().setText("0");
 				mGUI.getPosition4().setTextColor(Color.rgb(255,255,255));
 			}

@@ -10,10 +10,10 @@ public class ActivityData {
 
 	private int mPosition;
 	private String[][] shuffeldQuestionData;
-	private String[] answers;
-	private int[] mSolution;
+	private String[] answers; //Antwortmöglichekeiten
+	private int[] mSolution; //Richtige Reihenfolge
 	private String mQuestionText;
-	private int providedSolution[];
+	private int providedSolution[]; //Vom Nutzer eingegenebe Reihenfolge
 	private ActivityInit mActivity;
 
 	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit) {
@@ -28,22 +28,15 @@ public class ActivityData {
 			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1"));
 		}
 		else { 
-			restoreDataFromBundle(savedInstanceState);
-			
-		}
-		
-		
-
-		
-		
+			restoreDataFromBundle(savedInstanceState);	
+		}		
 	}
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
 		mPosition = savedInstanceState.getInt(Constants.KEY_POSTIONVALUE_SORTINGQUESTION);
 		providedSolution = savedInstanceState.getIntArray(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION);
 		answers = savedInstanceState.getStringArray(Constants.KEY_ANSWERSARRAY_SORTINGQUESTION);
-		mSolution = savedInstanceState.getIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION);
-		
+		mSolution = savedInstanceState.getIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION);		
 	}
 
 	public void saveDataInBundle(Bundle outState) {
@@ -53,7 +46,6 @@ public class ActivityData {
 		outState.putStringArray(Constants.KEY_ANSWERSARRAY_SORTINGQUESTION, answers);
 		outState.putIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION, mSolution);
 	}
-	 
 	
 	public void extractInformationFromDBQuery(String[] queryresult){
 		setQuestionText(queryresult[0]);
@@ -63,96 +55,64 @@ public class ActivityData {
 		shuffeldQuestionData = Shuffler.shuffleStringArray(tempParts);
 		Log.d("Data","Shuffeling done");
 		for(int i = 0; i< shuffeldQuestionData.length; i++ ){
-			
 			mSolution[i] = Integer.parseInt(shuffeldQuestionData[i][0]);
-			
-			answers[i]=shuffeldQuestionData[i][1];
-			
-		}
-		
+			answers[i]=shuffeldQuestionData[i][1];			
+		}	
 	}
+	
 	public void nextPosition() {
 		mPosition++;
+		for(int i = 0; i < providedSolution.length; i++){
+			if (mPosition == providedSolution[i]) mPosition++;
+		}
+		
 	}
 	
 	public void previousPosition(int pos) {
 		if (pos < mPosition){
 			mPosition = pos;
-			
-		}
+				}
 	}
 	
 	public void saveCurrentSolution(int index, int pos){
 		
 		providedSolution[index] = pos;
 	}
-	
 	// Getter
 	public int getPosition() {
-		return mPosition;
-	}
+		return mPosition;	}
 	
 	public ActivityInit getActivity() {
-		return mActivity;
-	}
+		return mActivity;	}
 
-	/**
-	 * @return the result
-	 */
 	public int[] getSolution() {
-		return mSolution;
-	}
+		return mSolution;	}
 
-	/**
-	 * @return the providedSolution
-	 */
 	public int[] getProvidedSolution() {
-		return providedSolution;
-	}
+		return providedSolution;	}
 
-	/**
-	 * @return the answers
-	 */
 	public String getAnswers(int index) {
-		return answers[index];
-	}
+		return answers[index];	}
 
-	/**
-	 * @param answers the answers to set
-	 */
 	public void setAnswers(String[] answers) {
-		this.answers = answers;
-	}
+		this.answers = answers;	}
 
-	/**
-	 * @param result the result to set
-	 */
 	public void setSolution(int[] result) {
-		this.mSolution = result;
-	}
+		this.mSolution = result;	}
 
-	/**
-	 * @param providedSolution the providedSolution to set
-	 */
 	public void setProvidedSolution(int[] providedSolution) {
-		this.providedSolution = providedSolution;
-	}
+		this.providedSolution = providedSolution;	}
 
 	//Setter
 	public void setPosition(int mPosition) {
-		this.mPosition = mPosition;
-	}
+		this.mPosition = mPosition;	}
 
 	public void setActivity(ActivityInit mActivity) {
-		this.mActivity = mActivity;
-	}
+		this.mActivity = mActivity;	}
 
 	public String getQuestionText() {
-		return mQuestionText;
-	}
+		return mQuestionText;	}
 
 	public void setQuestionText(String mQuestionText) {
-		this.mQuestionText = mQuestionText;
-	}
-
+		this.mQuestionText = mQuestionText;	}
 }

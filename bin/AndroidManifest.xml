@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="de.fhdw.devgroup.quizapp.main.ActivityMain"
+            android:name="de.fhdw.devgroup.quizapp.main.ActivityInit"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

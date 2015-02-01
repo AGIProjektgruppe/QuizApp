@@ -22,7 +22,8 @@ public class ActivityApplicationLogic {
 
 	public void startButtonClicked() {
 		
-		Intent intent = new Intent();
+		Intent intent; 
+		intent = new Intent();
         intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
         mData.getActivity().startActivity(intent);
 	}

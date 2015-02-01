@@ -11,7 +11,7 @@ public class ActivityData {
 	private ActivityInit mActivity;
 
 	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit) {
-		
+		mActivity = activityInit;
 		if ( savedInstanceState == null ) {  // no data to restore
 			
 		}

@@ -19,11 +19,6 @@ public class ActivityGUI {
 	private Button mAnswerButton4;
 	private Button mSubmit;
 
-	private TextView mPosition1;
-	private TextView mPosition2;
-	private TextView mPosition3;
-	private TextView mPosition4;
-	
 	//saving initialColor to allow color switching for multiple selected answers
 	private int initialColor;
 	
@@ -53,18 +48,6 @@ public class ActivityGUI {
 		mAnswerButton4.setText("Answer 4");
 		mAnswerButton4.setBackgroundColor(initialColor);
 		
-
-		mPosition1 = (TextView) activityInit.findViewById(R.id.position1);
-		mPosition2 = (TextView) activityInit.findViewById(R.id.position2);
-		mPosition3 = (TextView) activityInit.findViewById(R.id.position3);
-		mPosition4 = (TextView) activityInit.findViewById(R.id.position4);
-		
-		//mPositions are not needed in this question type
-		mPosition1.setText("");
-		mPosition2.setText("");
-		mPosition3.setText("");
-		mPosition4.setText("");
-		
 		setSubmit((Button) activityInit.findViewById(R.id.submit));
 	}
 
@@ -77,61 +60,41 @@ public class ActivityGUI {
 		return initialColor;
 	}
 
-
-
 	public Button getAnswerButton1() {
 		return mAnswerButton1;
 	}
-
-
 
 	public Button getAnswerButton2() {
 		return mAnswerButton2;
 	}
 
-
-
 	public Button getAnswerButton3() {
 		return mAnswerButton3;
 	}
-
-
 
 	public Button getAnswerButton4() {
 		return mAnswerButton4;
 	}
 
-
-
 	public Button getSubmit() {
 		return mSubmit;
 	}
-
-
 
 	public void setSubmit(Button mSubmit) {
 		this.mSubmit = mSubmit;
 	}
 
-
-
 	public void setAnswerButton1(Button mAnswerButton1) {
 		this.mAnswerButton1 = mAnswerButton1;
 	}
-
-
 
 	public void setAnswerButton2(Button mAnswerButton2) {
 		this.mAnswerButton2 = mAnswerButton2;
 	}
 
-
-
 	public void setAnswerButton3(Button mAnswerButton3) {
 		this.mAnswerButton3 = mAnswerButton3;
 	}
-
-
 
 	public void setAnswerButton4(Button mAnswerButton4) {
 		this.mAnswerButton4 = mAnswerButton4;

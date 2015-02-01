@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
-import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 
 
 public class ActivityInit extends Activity {
