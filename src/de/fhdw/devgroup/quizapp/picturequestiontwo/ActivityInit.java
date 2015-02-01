@@ -1,4 +1,4 @@
-package de.fhdw.quizappfragentypbild.type.two;
+package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
 import android.app.Activity;
 import android.os.Bundle;

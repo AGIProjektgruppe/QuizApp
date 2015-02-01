@@ -1,20 +1,20 @@
 package de.fhdw.devgroup.quizapp.sortingquestion;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.constants.Constants;
 
 public class ActivityApplicationLogic {
-	
-	
+		
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
 	private int mPosition; 
-	
-	
+		
 	public ActivityApplicationLogic(ActivityData mData, ActivityGUI mGUI, ActivityInit mActivity) {
 		Log.d("Logic","Logic Class created");
 		this.mActivity = mActivity;
@@ -33,7 +33,6 @@ public class ActivityApplicationLogic {
 	public void onAnswerButtonClicked(View v) {
 		
 		switch(v.getId()){
-		
 		case R.id.answer1:
 			Log.d("Msg", "answer1");
 			if (Integer.parseInt(mGUI.getPosition1().getText().toString()) == 0) {
@@ -93,9 +92,9 @@ public class ActivityApplicationLogic {
 		case R.id.submit:
 			checkResult(mData.getProvidedSolution(), mData.getSolution());
 			break;
-		}
-		
+		}	
 	}
+	
 	public void checkResult(int[] currentSolution, int[] correctSolution){
 		boolean correct = false;
 		for (int i = 0; i < currentSolution.length; i++) {
@@ -117,22 +116,17 @@ public class ActivityApplicationLogic {
 		}
 		if (correct == true){
 			Toast.makeText(mActivity.getApplicationContext(), "You are right! Go on with the next question.", Toast.LENGTH_SHORT).show();
-			//TODO Neue Frage Starten
+			Intent intent = new Intent();
+	        intent.setClass(mData.getActivity(), Constants.ACTIVITYMULTICLASS);
+	        mData.getActivity().startActivity(intent);
 		}
-		
-		
-		//TODO prüfen
-		
-		
 	}
+	
 	public void refreshGUI(){
 		int currentSolution[] = mData.getProvidedSolution();
 		mGUI.getPosition1().setText(String.valueOf(currentSolution[0]));
 		mGUI.getPosition2().setText(String.valueOf(currentSolution[1]));
 		mGUI.getPosition3().setText(String.valueOf(currentSolution[2]));
-		mGUI.getPosition4().setText(String.valueOf(currentSolution[3]));
-		
-		
+		mGUI.getPosition4().setText(String.valueOf(currentSolution[3]));	
 	}
-
 }

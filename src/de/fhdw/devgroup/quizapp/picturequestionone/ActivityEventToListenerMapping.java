@@ -1,4 +1,4 @@
-package de.fhdw.quizappfragentypbild.type.one;
+package de.fhdw.devgroup.quizapp.picturequestionone;
 
 import android.view.View;
 import android.view.View.OnClickListener;

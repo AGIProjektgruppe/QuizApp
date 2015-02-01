@@ -1,4 +1,4 @@
-package de.fhdw.quizappfragentypbild.type.two;
+package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,7 +25,7 @@ public class ActivityEventToListenerMapping  implements OnClickListener{
 	public void onClick(View v) {
 		switch(v.getId())
 		{
-		case R.id.button1: mApplicationLogic.onButton1Clicked(); break;
+		case R.id.highscore: mApplicationLogic.onButton1Clicked(); break;
 		case R.id.button2: mApplicationLogic.onButton2Clicked(); break;
 		case R.id.button3: mApplicationLogic.onButton3Clicked(); break;
 		case R.id.button4: mApplicationLogic.onButton4Clicked(); break;

@@ -11,9 +11,15 @@
 	<string name="app_name">QuizApp</string>
     <string name="hello_world">Hello world!</string>
 
-	<string name="question_text_placeholder">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</string>
+	<string name="question_text_placeholder">Lorem ipsum dolor sit amet, 
+	    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+	    ut labore et dolore magna aliquyam erat, sed diam voluptua.</string>
+	<string name="welcome_text"> Willkommen zu unserer Quiz App! Teste dein Wissen zum Thema Geld.</string>    
 	<string name="empty_string"> </string>
 	<string name="number_placeholder">0</string>
 	<string name="answer_placeholder">Answer answer_answer</string>
 	<string name="submit">Submit</string>
+	
+	<string name="start_quiz">Start</string>
+	<string name="highscore">Highscore</string>
 </resources>

@@ -1,4 +1,4 @@
-package de.fhdw.quizappfragentypbild.type.one;
+package de.fhdw.devgroup.quizapp.picturequestionone;
 
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +14,7 @@ public class ActivityGUI {
 	private Button mConfirm;
 	
 	public ActivityGUI(ActivityInit act) {
-		act.setContentView(R.layout.activity_type_one);
+		act.setContentView(R.layout.activity_picturequestion_one);
 		
 		mImage = (ImageView) act.findViewById(R.id.imageViewt1);
 		mText = (TextView) act.findViewById(R.id.t1_question_text);

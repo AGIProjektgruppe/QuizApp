@@ -1,4 +1,4 @@
-package de.fhdw.quizappfragentypbild.type.two;
+package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,11 +15,11 @@ public class ActivityGUI {
 	private Button mButton4;
 	
 	public ActivityGUI(ActivityInit act) {
-		act.setContentView(R.layout.activity_type_two);
+		act.setContentView(R.layout.activity_picturequestion_two);
 		
 		mImage = (ImageView) act.findViewById(R.id.imageViewt2);
 		mText = (TextView) act.findViewById(R.id.question_text);
-		mButton1 = (Button) act.findViewById(R.id.button1);
+		mButton1 = (Button) act.findViewById(R.id.highscore);
 		mButton2 = (Button) act.findViewById(R.id.button2);
 		mButton3 = (Button) act.findViewById(R.id.button3);
 		mButton4 = (Button) act.findViewById(R.id.button4);

@@ -1,24 +1,30 @@
-package de.fhdw.quizappfragentypbild.type.one;
+package de.fhdw.devgroup.quizapp.main;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 
-public class ActivityInit extends Activity{
+
+public class ActivityInit extends Activity {
 	
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
 	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		initData(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d("Create","Succesfully Created");
+        setContentView(R.layout.activity_main);
+        initData(savedInstanceState);
 		initGUI();
 		initApplicationLogic();
 		initEventToListenerMapping();
-	}
+    }
 
-	private void initData(Bundle savedInstanceState) {
+    private void initData(Bundle savedInstanceState) {
 		mData = new ActivityData(savedInstanceState, this);
 	}
 	
@@ -27,7 +33,7 @@ public class ActivityInit extends Activity{
 	}
 
 	private void initApplicationLogic() {
-		mApplicationLogic = new ActivityApplicationLogic(mData, mGUI);
+		mApplicationLogic = new ActivityApplicationLogic(mData, mGUI, this);
 	}
 	
 	private void initEventToListenerMapping() {
@@ -40,5 +46,5 @@ public class ActivityInit extends Activity{
 		super.onSaveInstanceState(outState);
 	}
 	
-
+	
 }

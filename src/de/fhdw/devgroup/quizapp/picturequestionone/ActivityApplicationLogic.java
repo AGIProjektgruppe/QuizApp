@@ -1,7 +1,9 @@
-package de.fhdw.quizappfragentypbild.type.one;
+package de.fhdw.devgroup.quizapp.picturequestionone;
 
 import java.util.Random;
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
+import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -54,7 +56,9 @@ public class ActivityApplicationLogic {
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
 		//restart Activity for new Question
-		mData.getActivity().recreate();
+		Intent intent = new Intent();
+        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSTWO);
+        mData.getActivity().startActivity(intent);
 
 	}
 
