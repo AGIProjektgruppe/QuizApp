@@ -9,7 +9,6 @@ import android.widget.Toast;
 import de.fhdw.devgroup.quizapp.R;
 import de.fhdw.devgroup.quizapp.constants.Constants;
 
-
 /**
  * 
  * @author Sebastian Feder

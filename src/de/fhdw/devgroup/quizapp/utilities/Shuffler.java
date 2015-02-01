@@ -3,7 +3,11 @@ package de.fhdw.devgroup.quizapp.utilities;
 import java.util.Random;
 
 import android.util.Log;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class Shuffler {
 	
 	public static String[][] shuffleStringArray(String[] stringArray){

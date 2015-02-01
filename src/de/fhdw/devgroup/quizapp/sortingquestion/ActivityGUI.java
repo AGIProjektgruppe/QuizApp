@@ -4,7 +4,11 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import de.fhdw.devgroup.quizapp.R;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityGUI {
 
 	private TextView mQuestionText;

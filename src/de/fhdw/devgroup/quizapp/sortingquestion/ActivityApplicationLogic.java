@@ -7,13 +7,16 @@ import android.view.View;
 import android.widget.Toast;
 import de.fhdw.devgroup.quizapp.R;
 import de.fhdw.devgroup.quizapp.constants.Constants;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityApplicationLogic {
 		
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
-	private int mPosition; 
 		
 	public ActivityApplicationLogic(ActivityData mData, ActivityGUI mGUI, ActivityInit mActivity) {
 		Log.d("Logic","Logic Class created");

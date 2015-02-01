@@ -3,7 +3,11 @@ package de.fhdw.devgroup.quizapp.main;
 import android.content.Intent;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.constants.Constants;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityApplicationLogic {
 	
 	

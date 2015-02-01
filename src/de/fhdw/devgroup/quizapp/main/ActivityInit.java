@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
-
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityInit extends Activity {
 	
 	private ActivityData mData;

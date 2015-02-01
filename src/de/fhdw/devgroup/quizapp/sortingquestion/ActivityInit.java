@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
 import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 
 public class ActivityInit extends Activity {
 	

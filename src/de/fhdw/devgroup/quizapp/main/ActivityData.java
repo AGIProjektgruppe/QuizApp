@@ -5,7 +5,11 @@ import android.util.Log;
 import de.fhdw.devgroup.quizapp.constants.Constants;
 import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 import de.fhdw.devgroup.quizapp.utilities.Shuffler;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityData {
 
 	private ActivityInit mActivity;

@@ -5,7 +5,11 @@ import android.util.Log;
 import de.fhdw.devgroup.quizapp.constants.Constants;
 import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 import de.fhdw.devgroup.quizapp.utilities.Shuffler;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityData {
 
 	private int mPosition;
@@ -23,9 +27,9 @@ public class ActivityData {
 			mPosition = 1;   // use default
 			providedSolution = new int[4];
 			mSolution = new int[4];
-			shuffeldQuestionData = new String[4][2];
+			shuffeldQuestionData = new String[4][2]; //Antworten durcheinander würfeln
 			answers = new String[4];
-			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1"));
+			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1")); //Aus der Rückgabe der Datenbankabfrage Antwort, Fragetext und Lösung aufteilen
 		}
 		else { 
 			restoreDataFromBundle(savedInstanceState);	

@@ -2,7 +2,11 @@ package de.fhdw.devgroup.quizapp.main;
 
 import android.widget.Button;
 import de.fhdw.devgroup.quizapp.R;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class ActivityGUI {
 
 	private Button mStart;

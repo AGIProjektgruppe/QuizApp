@@ -3,7 +3,11 @@ package de.fhdw.devgroup.quizapp.utilities;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
-
+/**
+ * 
+ * @author Tobias Hilger
+ * @version 1.0
+ */
 public class QuestionManager {
 	
 	
