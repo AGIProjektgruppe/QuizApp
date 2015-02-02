@@ -29,6 +29,9 @@ public class Data_TS_V01 {
 			setBtn01Text("Submit");
 		}
 		else {
+			setQuestionText("Wieviel Millionäre gibt es in Deutschland?");
+			setAnswer(386000);
+			setBtn01Text("Submit");
 			restoreDataFromBundle(savedInstanceState);
 		}
 	}
