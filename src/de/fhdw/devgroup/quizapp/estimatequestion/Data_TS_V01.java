@@ -38,7 +38,7 @@ public class Data_TS_V01 {
 	
 	// save
 	public void saveDataInBundle(Bundle b) {
-		b.putDouble(Constants.KEY_USERESTMATE_ESTIMATEQUESTION, Double.parseDouble(mGUI.getEtAnswer().getText().toString()));
+		if (mGUI.getEtAnswer().getText().toString() != null ) b.putDouble(Constants.KEY_USERESTMATE_ESTIMATEQUESTION, Double.parseDouble(mGUI.getEtAnswer().getText().toString()));
 	}
 	
 	// restore
