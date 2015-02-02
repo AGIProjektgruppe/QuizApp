@@ -19,8 +19,8 @@ public class Init_TS_V01 extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.layout_qot_rg_v01);
-		initData(savedInstanceState);
 		initGUI();
+		initData(savedInstanceState);
 		initApplicationLogic();
 		initEventToListenerMapping();
 	}
@@ -51,7 +51,6 @@ public class Init_TS_V01 extends Activity{
 		mData.saveDataInBundle(outState);
 		super.onSaveInstanceState(outState);
 	}
-	
 	
 
 }

@@ -2,7 +2,9 @@ package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
 import java.util.Random;
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.app.Activity;
+import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -66,7 +68,12 @@ public class ActivityApplicationLogic extends Activity{
 		mData.getActivity().recreate();
 
 	}
-	
+	public void startNewQuestion(){
+		
+		Intent intent = new Intent();
+        intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
+        mData.getActivity().startActivity(intent);
+	}
 	public void onButton2Clicked() {
 		//build string and id to get the right answer from xml file
 		String answer = "question_" + randomNumber + "_right_answer";
@@ -85,7 +92,7 @@ public class ActivityApplicationLogic extends Activity{
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
 		//restart or forward to next activity to continue game
-		mData.getActivity().recreate();
+		startNewQuestion();
 		
 	}
 	public void onButton3Clicked() {
@@ -106,7 +113,7 @@ public class ActivityApplicationLogic extends Activity{
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
 		//restart or forward to next activity to continue game
-		mData.getActivity().recreate();
+		startNewQuestion();
 		
 	}
 	public void onButton4Clicked() {
@@ -127,7 +134,7 @@ public class ActivityApplicationLogic extends Activity{
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
 		//restart or forward to next activity to continue game
-		mData.getActivity().recreate();
+		startNewQuestion();
 	}
 	
 	//here i can add a new method to check if two string are equal or not and then give a popup

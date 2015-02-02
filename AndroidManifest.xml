@@ -26,6 +26,7 @@
         <activity android:name="de.fhdw.devgroup.quizapp.multiquestion.ActivityInit"></activity>
         <activity android:name="de.fhdw.devgroup.quizapp.picturequestionone.ActivityInit"></activity>
         <activity android:name="de.fhdw.devgroup.quizapp.picturequestiontwo.ActivityInit"></activity>
+        <activity android:name="de.fhdw.devgroup.quizapp.estimatequestion.Init_TS_V01"></activity>
     </application>
 
 </manifest>

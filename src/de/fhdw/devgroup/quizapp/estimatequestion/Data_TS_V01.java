@@ -1,6 +1,7 @@
 package de.fhdw.devgroup.quizapp.estimatequestion;
 
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.os.Bundle;
 
 /**
@@ -34,12 +35,12 @@ public class Data_TS_V01 {
 	
 	// save
 	public void saveDataInBundle(Bundle b) {
-		//b.putDouble("K1", Double.parseDouble(mGUI.getEtAnswer().getText().toString()));
+		b.putDouble(Constants.KEY_USERESTMATE_ESTIMATEQUESTION, Double.parseDouble(mGUI.getEtAnswer().getText().toString()));
 	}
 	
 	// restore
 	public void restoreDataFromBundle(Bundle b) {
-		//mGUI.getEtAnswer().setText(String.valueOf(b.getDouble("K1")));
+		mGUI.getEtAnswer().setText(String.valueOf(b.getDouble(Constants.KEY_USERESTMATE_ESTIMATEQUESTION)));
 	}
 	
 	// change data

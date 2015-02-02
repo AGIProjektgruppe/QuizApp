@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_number_t1">5</string>
+    <string name="question_text_init">Wie viel Beispiele sind das?</string>
+    <string name="button_text">Bestätigen</string>
+    
+    <string name="question_1_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_1_answer">285</string>
+    
+    <string name="question_2_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_2_answer">4100</string>
+    
+    <string name="question_3_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_3_answer">630</string>
+    
+    <string name="question_4_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_4_answer">685</string>
+    
+    <string name="question_5_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_5_answer">885</string>
+    
+    
+</resources>

@@ -22,55 +22,5 @@
 	
 	<string name="start_quiz">Start</string>
 	<string name="highscore">Highscore</string>
-	<string name="question_number_t1">5</string>
-    <string name="question_text_init">Wie viel Beispiele sind das?</string>
-    <string name="button_text">Bestätigen</string>
-    
-    <string name="question_1_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_1_answer">285</string>
-    
-    <string name="question_2_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_2_answer">4100</string>
-    
-    <string name="question_3_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_3_answer">630</string>
-    
-    <string name="question_4_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_4_answer">685</string>
-    
-    <string name="question_5_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_6_answer">885</string>
-    
-     <string name="question_number_t2">5</string>
-    <string name="question_text">Zu welchem Land gehört die abgebildete Währung?</string>
-    
-    <string name="question_1_answer_1">Litauen</string>
-    <string name="question_1_answer_2">Portugal</string>
-    <string name="question_1_answer_3">Ukraine</string>
-    <string name="question_1_answer_4">Polen</string>
-    <string name="question_1_right_answer">Ukraine</string>
-    
-    <string name="question_2_answer_1">Ungarn</string>
-    <string name="question_2_answer_2">Russland</string>
-    <string name="question_2_answer_3">Polen</string>
-    <string name="question_2_answer_4">Tschechien</string>
-    <string name="question_2_right_answer">Ungarn</string>
-    
-    <string name="question_3_answer_1">Kenia</string>
-    <string name="question_3_answer_2">Simbabwe</string>
-    <string name="question_3_answer_3">Thailand</string>
-    <string name="question_3_answer_4">Lybien</string>
-    <string name="question_3_right_answer">Lybien</string>
-    
-    <string name="question_4_answer_1">Kroatien</string>
-    <string name="question_4_answer_2">Bosnien Herzegowina</string>
-    <string name="question_4_answer_3">Thailand</string>
-    <string name="question_4_answer_4">Madagaskar</string>
-    <string name="question_4_right_answer">Thailand</string>
-    
-    <string name="question_5_answer_1">Niger</string>
-    <string name="question_5_answer_2">Kenia</string>
-    <string name="question_5_answer_3">Südafrika</string>
-    <string name="question_5_answer_4">Kongo</string>
-    <string name="question_5_right_answer">Kenia</string>
+
 </resources>
