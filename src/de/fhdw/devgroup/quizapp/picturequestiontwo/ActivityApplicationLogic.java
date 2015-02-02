@@ -65,7 +65,7 @@ public class ActivityApplicationLogic extends Activity{
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
 		//restart or forward to next activity to continue game
-		mData.getActivity().recreate();
+		startNewQuestion();
 
 	}
 	public void startNewQuestion(){
