@@ -43,13 +43,29 @@ public class ActivityApplicationLogic extends Activity{
 	// event handling
 	
 	public void onButton1Clicked() {
-		//build string and id to get the right answer from xml file
-		String answer = "question_" + randomNumber + "_right_answer";
-		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
-		//get clicked answer
-		String givenAnswer = mGUI.getmButton1().getText().toString();
-		//check if the user was right or wrong
+		buttonHandler(1);
+	}
+
+	public void onButton2Clicked() {
+		buttonHandler(2);
+		
+	}
+	public void onButton3Clicked() {
+		buttonHandler(3);
+		
+	}
+	public void onButton4Clicked() {
+		buttonHandler(4);
+	}
+	
+	public void startNewQuestion(){
+		
+		Intent intent = new Intent();
+        intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
+        mData.getActivity().startActivity(intent);
+	}
+	
+	public void checkAnswer(String givenAnswer, String rightAnswer) {
 		if (rightAnswer.equals(givenAnswer)) {
 			//Popup right answer
 			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
@@ -59,82 +75,34 @@ public class ActivityApplicationLogic extends Activity{
 			//Popup wrong answer
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
-		//restart or forward to next activity to continue game
-		startNewQuestion();
-
-	}
-	public void startNewQuestion(){
 		
-		Intent intent = new Intent();
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
-        mData.getActivity().startActivity(intent);
-	}
-	public void onButton2Clicked() {
-		//build string and id to get the right answer from xml file
-		String answer = "question_" + randomNumber + "_right_answer";
-		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
-		//get clicked answer
-		String givenAnswer = mGUI.getmButton2().getText().toString();
-		//check if the user was right or wrong
-		if (rightAnswer.equals(givenAnswer)) {
-			//popup right answer
-			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
-		}
-		else
-		{
-			//Popup wrong answer
-			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
-		}
-		//restart or forward to next activity to continue game
-		startNewQuestion();
-		
-	}
-	public void onButton3Clicked() {
-		//build string and id to get the right answer from xml file
-		String answer = "question_" + randomNumber + "_right_answer";
-		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
-		//get clicked answer
-		String givenAnswer = mGUI.getmButton3().getText().toString();
-		//check if the user was right or wrong
-		if (rightAnswer.equals(givenAnswer)) {
-			//popup right answer
-			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
-		}
-		else
-		{
-			//Popup wrong answer
-			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
-		}
-		//restart or forward to next activity to continue game
-		startNewQuestion();
-		
-	}
-	public void onButton4Clicked() {
-		//build string and id to get the right answer from xml file
-		String answer = "question_" + randomNumber + "_right_answer";
-		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
-		//get clicked answer
-		String givenAnswer = mGUI.getmButton4().getText().toString();
-		//check if the user was right or wrong
-		if (rightAnswer.equals(givenAnswer)) {
-			//popup right answer
-			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
-		}
-		else
-		{
-			//Popup wrong answer
-			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
-		}
-		//restart or forward to next activity to continue game
-		startNewQuestion();
 	}
 	
-	//here i can add a new method to check if two string are equal or not and then give a popup
-	//public void checkAnswers(String rightAnswer, String givenAnswer) { }
-	//the same with getting the right answer
-	//public String getRightAnswer() { }
+	public String getRightAnswer() {
+		//build string and id to get the right answer from xml file
+		String answer = "question_" + randomNumber + "_right_answer";
+		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
+		String rightAnswer = mData.getActivity().getResources().getString(id);
+		
+		return rightAnswer;
+	}
+	
+	public void buttonHandler(int lButtonNumber) {
+		
+		String rAnswer = getRightAnswer();
+		//get clicked answer
+		String givenAnswer = "";
+		switch(lButtonNumber) {
+		case 1: givenAnswer = mGUI.getmButton1().getText().toString();break;
+		case 2: givenAnswer = mGUI.getmButton2().getText().toString();break;
+		case 3: givenAnswer = mGUI.getmButton3().getText().toString();break;
+		case 4: givenAnswer = mGUI.getmButton4().getText().toString();break;
+		
+		}
+		//check if the user was right or wrong
+		checkAnswer(givenAnswer, rAnswer);		
+		//restart or forward to next activity to continue game
+		startNewQuestion();		
+	}
 
 }
