@@ -1,11 +1,9 @@
 package de.fhdw.devgroup.quizapp.picturequestionone;
 
-import java.util.Random;
-
-import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.Toast;
+import de.fhdw.devgroup.quizapp.constants.Constants;
 
 /**
  * 
@@ -16,14 +14,12 @@ public class ActivityApplicationLogic {
 	
 	private ActivityData mData;
 	private ActivityGUI mGUI;
-	private Random rand = new Random();
-	//randomnumber between 1-5 to get one of those questions
-	//next((max-min)+1)+1
-	private int randomNumber = rand.nextInt((5-1)+1)+1;
+	private int randomNumber;
 
 	public ActivityApplicationLogic(ActivityData mData, ActivityGUI mGUI) {
 		this.mData = mData;
 		this.mGUI = mGUI;
+		randomNumber = mData.getCurrentRandomNumber();
 				
 		//set random image
 		ImageView img = (ImageView) mGUI.getmImage();

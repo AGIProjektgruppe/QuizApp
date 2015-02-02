@@ -1,5 +1,7 @@
 package de.fhdw.devgroup.quizapp.picturequestionone;
 
+import java.util.Random;
+
 import android.os.Bundle;
 
 /**
@@ -9,15 +11,18 @@ import android.os.Bundle;
  */
 public class ActivityData {
 	
-	private static final String ENTEREDSTRING = "K1";
+	private static final String CURRENTRANDOMNUMBER = "K1";
 	
 	private ActivityInit mActivity;
-	private String mTypedIn;
+	private int mCurrentRandomNumber;
 
 	public ActivityData (Bundle savedInstanceState, ActivityInit act) {
 		mActivity = act;
 		if ( savedInstanceState == null ) {  // no data to restore
-			mTypedIn = ""; //use default
+			Random rand = new Random();
+			//randomnumber between 1-5 to get one of those questions
+			//next((max-min)+1)+1
+			mCurrentRandomNumber = rand.nextInt((5-1)+1)+1;
 		}
 		else {
 			restoreDataFromBundle(savedInstanceState);
@@ -27,20 +32,16 @@ public class ActivityData {
 	// save and restore
 	
 	public void saveDataInBundle(Bundle b) {
-		b.putString(ENTEREDSTRING, mTypedIn);
+		b.putInt(CURRENTRANDOMNUMBER, mCurrentRandomNumber);
 	}
 	
 	public void restoreDataFromBundle(Bundle b) {
-		mTypedIn = b.getString(ENTEREDSTRING);
+		mCurrentRandomNumber = b.getInt(CURRENTRANDOMNUMBER);
 	}
-	
-	// setter	
-	public void setmTypedIn(String mTypedIn) {
-		this.mTypedIn = mTypedIn;
-	}
+
 	// getter
-	public String getmTypedIn() {
-		return mTypedIn;
+	public int getCurrentRandomNumber() {
+		return mCurrentRandomNumber;
 	}
 	
 	public ActivityInit getActivity() {
