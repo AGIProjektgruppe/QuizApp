@@ -57,12 +57,16 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f09000d;
-        public static final int action_settings=0x7f09001d;
+        public static final int action_settings=0x7f090027;
         public static final int answer1=0x7f090004;
         public static final int answer2=0x7f090005;
         public static final int answer3=0x7f090006;
         public static final int answer4=0x7f090007;
         public static final int answer_textfield=0x7f09000b;
+        public static final int btn1=0x7f090022;
+        public static final int btn2=0x7f090023;
+        public static final int btn3=0x7f090024;
+        public static final int btn4=0x7f090025;
         public static final int button1=0x7f090014;
         public static final int button2=0x7f090015;
         public static final int button3=0x7f090017;
@@ -71,6 +75,7 @@ public final class R {
         public static final int button_layout_down=0x7f090016;
         public static final int button_layout_up=0x7f090013;
         public static final int confirm_button=0x7f09000c;
+        public static final int editTextField1=0x7f090020;
         public static final int highscore=0x7f090003;
         public static final int imageViewt1=0x7f090009;
         public static final int imageViewt2=0x7f09000f;
@@ -80,11 +85,16 @@ public final class R {
         public static final int position2=0x7f09001a;
         public static final int position3=0x7f09001b;
         public static final int position4=0x7f09001c;
+        public static final int progressBar01=0x7f090026;
         public static final int questionText=0x7f090001;
         public static final int question_text=0x7f090011;
+        public static final int row1st=0x7f09001e;
+        public static final int row2nd=0x7f09001f;
+        public static final int row3rd=0x7f090021;
         public static final int start=0x7f090002;
         public static final int submit=0x7f090008;
         public static final int t1_question_text=0x7f09000a;
+        public static final int textView01=0x7f09001d;
         public static final int text_layout=0x7f090010;
     }
     public static final class layout {
@@ -93,6 +103,8 @@ public final class R {
         public static final int activity_picturequestion_one=0x7f030002;
         public static final int activity_picturequestion_two=0x7f030003;
         public static final int activity_sortingquestion=0x7f030004;
+        public static final int layout_e_ts_v01=0x7f030005;
+        public static final int layout_qot_rg_v01=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
