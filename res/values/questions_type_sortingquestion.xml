@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="sortingquestion_text_1">Reihenfolge?</string>
+    <string name="sortingquestion_text_1">Ordnen Sie diese 4 Währungen aufsteigend nach Erscheinungsjahr!</string>
     
-    <string name="sortingquestion_1_answer_1">A</string>
-    <string name="sortingquestion_1_answer_2">B</string>
-    <string name="sortingquestion_1_answer_3">C</string>
-    <string name="sortingquestion_1_answer_4">D</string>
+    <string name="sortingquestion_1_answer_1">Britsches Pfund</string>
+    <string name="sortingquestion_1_answer_2">US Dollar</string>
+    <string name="sortingquestion_1_answer_3">D-Mark</string>
+    <string name="sortingquestion_1_answer_4">Euro</string>
 
-    <string name="sortingquestion_text_2">Reihenfolge?</string>
-    <string name="sortingquestion_2_answer_1">AA</string>
-    <string name="sortingquestion_2_answer_2">BB</string>
-    <string name="sortingquestion_2_answer_3">CC</string>
-    <string name="sortingquestion_2_answer_4">DD</string>
+    <string name="sortingquestion_text_2">In welcher Währung bekommen Sie für einen Euro am meisten? (aufsteigend sortieren)</string>
+    <string name="sortingquestion_2_answer_1">GBP</string>
+    <string name="sortingquestion_2_answer_2">CHF</string>
+    <string name="sortingquestion_2_answer_3">USD</string>
+    <string name="sortingquestion_2_answer_4">JPY</string>
 
-    <string name="sortingquestion_text_3">Reihenfolge?</string>
-    <string name="sortingquestion_3_answer_1">1A</string>
-    <string name="sortingquestion_3_answer_2">2B</string>
-    <string name="sortingquestion_3_answer_3">3C</string>
-    <string name="sortingquestion_3_answer_4">4D</string>
+    <string name="sortingquestion_text_3">Ordnen Sie diese Länder aufsteigend nach Einführung des Euros!</string>
+    <string name="sortingquestion_3_answer_1">Deutschland</string>
+    <string name="sortingquestion_3_answer_2">Griechenland</string>
+    <string name="sortingquestion_3_answer_3">Estland</string>
+    <string name="sortingquestion_3_answer_4">Litauen</string>
 
-    <string name="sortingquestion_text_4">Reihenfolgeg?</string>
-    <string name="sortingquestion_4_answer_1">A1</string>
-    <string name="sortingquestion_4_answer_2">B2</string>
-    <string name="sortingquestion_4_answer_3">C3</string>
-    <string name="sortingquestion_4_answer_4">D4</string>
+    <string name="sortingquestion_text_4">Ordnen Sie diese Länder aufsteigend nach Einführung des Euros!</string>
+    <string name="sortingquestion_4_answer_1">Frankreich</string>
+    <string name="sortingquestion_4_answer_2">Slowenien</string>
+    <string name="sortingquestion_4_answer_3">Zypern</string>
+    <string name="sortingquestion_4_answer_4">Lettland</string>
 
-    <string name="sortingquestion_text_5">Reihenfolge?</string>
-    <string name="sortingquestion_5_answer_1">1_A</string>
-    <string name="sortingquestion_5_answer_2">2_B</string>
-    <string name="sortingquestion_5_answer_3">3_C</string>
-    <string name="sortingquestion_5_answer_4">4_D</string>
+    <string name="sortingquestion_text_5">Ordnen Sie diese Länder aufsteigend nach Pro-Kopf-Einkommen!</string>
+    <string name="sortingquestion_5_answer_1">Niederlande</string>
+    <string name="sortingquestion_5_answer_2">Belgien</string>
+    <string name="sortingquestion_5_answer_3">USA</string>
+    <string name="sortingquestion_5_answer_4">Schweiz</string>
     
-    <string name="sortingquestion_text_6">Reihenfolge?</string>
-    <string name="sortingquestion_6_answer_1">A</string>
-    <string name="sortingquestion_6_answer_2">B</string>
-    <string name="sortingquestion_6_answer_3">C</string>
-    <string name="sortingquestion_6_answer_4">D</string>
+    <string name="sortingquestion_text_6">Ordnen Sie diese Länder aufsteigend nach Anzahl der Millionäre (Jahr 2012)!</string>
+    <string name="sortingquestion_6_answer_1">Indien</string>
+    <string name="sortingquestion_6_answer_2">Australien</string>
+    <string name="sortingquestion_6_answer_3">China</string>
+    <string name="sortingquestion_6_answer_4">Vereinigte Staaten</string>
 
-    <string name="sortingquestion_text_7">Reihenfolge?</string>
-    <string name="sortingquestion_7_answer_1">A1A</string>
-    <string name="sortingquestion_7_answer_2">B2B</string>
-    <string name="sortingquestion_7_answer_3">C3C</string>
-    <string name="sortingquestion_7_answer_4">D4D</string>
+    <string name="sortingquestion_text_7">Ordnen Sie diese Länder aufsteigend nach Ihrer Inflationsrate!</string>
+    <string name="sortingquestion_7_answer_1">USA</string>
+    <string name="sortingquestion_7_answer_2">Ghana</string>
+    <string name="sortingquestion_7_answer_3">Afghanistan</string>
+    <string name="sortingquestion_7_answer_4">Simbawe</string>
 
-    <string name="sortingquestion_text_8">Reihenfolge?</string>
-    <string name="sortingquestion_8_answer_1">1A</string>
-    <string name="sortingquestion_8_answer_2">2B</string>
-    <string name="sortingquestion_8_answer_3">3C</string>
-    <string name="sortingquestion_8_answer_4">4D</string>
+    <string name="sortingquestion_text_8">Ordnen Sie diese EU Länder aufsteigend nach dem Bruttoinlandsprodukt!</string>
+    <string name="sortingquestion_8_answer_1">Italien</string>
+    <string name="sortingquestion_8_answer_2">Frankreich</string>
+    <string name="sortingquestion_8_answer_3">Großbritanien</string>
+    <string name="sortingquestion_8_answer_4">Deutschland</string>
 
-    <string name="sortingquestion_text_9">Reihenfolgeg?</string>
-    <string name="sortingquestion_9_answer_1">A1</string>
-    <string name="sortingquestion_9_answer_2">B2</string>
-    <string name="sortingquestion_9_answer_3">C3</string>
-    <string name="sortingquestion_9_answer_4">D4</string>
+    <string name="sortingquestion_text_9">Ordnen Sie dies EU Länder nach Nettovermögen pro Haushalt?</string>
+    <string name="sortingquestion_9_answer_1">Belgien</string>
+    <string name="sortingquestion_9_answer_2">Malta</string>
+    <string name="sortingquestion_9_answer_3">Zypern</string>
+    <string name="sortingquestion_9_answer_4">Luxemburg</string>
 
-    <string name="sortingquestion_text_10">Reihenfolge?</string>
-    <string name="sortingquestion_10_answer_1">1_A</string>
-    <string name="sortingquestion_10_answer_2">2_B</string>
-    <string name="sortingquestion_10_answer_3">3_C</string>
-    <string name="sortingquestion_10_answer_4">4_D</string>
+    <string name="sortingquestion_text_10">Ordnen Sie dies metalle aufsteigend nach Wert!</string>
+    <string name="sortingquestion_10_answer_1">Silber</string>
+    <string name="sortingquestion_10_answer_2">Palladium</string>
+    <string name="sortingquestion_10_answer_3">Platin</string>
+    <string name="sortingquestion_10_answer_4">Gold</string>
 
     
 </resources>
