@@ -15,6 +15,7 @@ public class ActivityInit extends Activity {
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
 	
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

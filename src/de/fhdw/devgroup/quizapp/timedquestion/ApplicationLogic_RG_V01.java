@@ -17,7 +17,7 @@ public class ApplicationLogic_RG_V01 {
 	private Data_RG_V01 mData;
 	private GUI_RG_V01 mGUI;
 	private CountDownTimer mCountDownTimer;
-	private final long countdownTime = 1000;
+	private final long countdownTime = 10000;
 	private static int questionsPlayed = 0;
 	
 	// Handler für einen kurzenTimedelay

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 /**
  * 
@@ -16,6 +17,9 @@ public class ActivityInit extends Activity {
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
+	int[] questionOrder;
+	int questionNr;
+	int mScore;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +41,14 @@ public class ActivityInit extends Activity {
     	
     }
 
-
     private void initData(Bundle savedInstanceState) {
-		mData = new ActivityData(savedInstanceState, this);
+    	Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONORDER);
+			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
+		}
+		mData = new ActivityData(savedInstanceState, this, questionOrder, questionNr ,mScore);
 	}
 	
 	private void initGUI() {

@@ -37,7 +37,6 @@ public class ActivityApplicationLogic {
 		
 		switch(v.getId()){
 		case R.id.answer1:
-			Log.d("Msg", "answer1");
 			if (Integer.parseInt(mGUI.getPosition1().getText().toString()) == 0) {
 				mGUI.getPosition1().setText(String.valueOf(mData.getPosition()));	
 				mData.saveCurrentSolution(0, mData.getPosition());
@@ -124,8 +123,19 @@ public class ActivityApplicationLogic {
 		if (correct == true){
 			Toast.makeText(mActivity.getApplicationContext(), "You are right! Go on with the next question.", Toast.LENGTH_SHORT).show();
 			Intent intent = new Intent();
+			mData.setQuestionScore(mData.getQuestionScore() + 1);
+			if(mData.getQuestionNr() != 3){
+			mData.setQuestionNr(mData.getQuestionNr() + 1);
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+			
 	        intent.setClass(mData.getActivity(), Constants.ACTIVITYMULTICLASS);
 	        mData.getActivity().startActivity(intent);
+			}
+			else{
+				Toast.makeText(mActivity.getApplicationContext(), "Score: " + mData.getQuestionScore(), Toast.LENGTH_SHORT).show();	
+			}
 		}
 	}
 	

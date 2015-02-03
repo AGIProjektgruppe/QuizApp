@@ -19,8 +19,14 @@ public class ActivityData {
 	private String mQuestionText;
 	private int providedSolution[]; //Vom Nutzer eingegenebe Reihenfolge
 	private ActivityInit mActivity;
+	private int[] mQuestionOrder;
+	private int mQuestionNr;
+	private int mQuestionScore;
 
-	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit) {
+	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit, int[] questionOrder, int questionNr, int mScore) {
+		setQuestionOrder(questionOrder);
+		setQuestionNr(questionNr);
+		setQuestionScore(mScore);
 		
 		setActivity(activityInit);
 		if ( savedInstanceState == null ) {  // no data to restore
@@ -97,6 +103,30 @@ public class ActivityData {
 
 	public String getAnswers(int index) {
 		return answers[index];	}
+
+	public int getQuestionScore() {
+		return mQuestionScore;
+	}
+
+	public int getQuestionNr() {
+		return mQuestionNr;
+	}
+
+	public int[] getQuestionOrder() {
+		return mQuestionOrder;
+	}
+
+	public void setQuestionOrder(int[] mQuestionOrder) {
+		this.mQuestionOrder = mQuestionOrder;
+	}
+
+	public void setQuestionNr(int mQuestionNr) {
+		this.mQuestionNr = mQuestionNr;
+	}
+
+	public void setQuestionScore(int mQuestionScore) {
+		this.mQuestionScore = mQuestionScore;
+	}
 
 	public void setAnswers(String[] answers) {
 		this.answers = answers;	}

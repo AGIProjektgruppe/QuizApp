@@ -19,5 +19,20 @@
     <string name="question_5_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
     <string name="question_5_answer">885</string>
     
+    <string name="question_6_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_6_answer">285</string>
+    
+    <string name="question_7_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_7_answer">4100</string>
+    
+    <string name="question_8_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_8_answer">630</string>
+    
+    <string name="question_9_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_9_answer">685</string>
+    
+    <string name="question_10_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_10_answer">885</string>
+    
     
 </resources>
