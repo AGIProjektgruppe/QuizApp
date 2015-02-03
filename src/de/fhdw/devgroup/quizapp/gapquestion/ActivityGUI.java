@@ -20,7 +20,7 @@ public class ActivityGUI {
 	public ActivityGUI(ActivityInit act) {
 		act.setContentView(R.layout.activity_gapquestion);
 		
-		mText = (TextView) act.findViewById(R.id.textView2);
+		mText = (TextView) act.findViewById(R.id.question_text);
 		mButton1 = (Button) act.findViewById(R.id.button1);
 		mButton2 = (Button) act.findViewById(R.id.button2);
 		mButton3 = (Button) act.findViewById(R.id.button3);
