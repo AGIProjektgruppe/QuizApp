@@ -37,12 +37,12 @@ public class ActivityData {
 	}
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
-		//TODO make own constants for this type of question ?? dont know if this is necessary
+		
 		providedSolution = savedInstanceState.getIntegerArrayList(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION);
 	}
 
 	public void saveDataInBundle(Bundle outState) {	
-		//TODO make own constants for this type of question ?? dont know if this is necessary
+		
 		outState.putIntegerArrayList(Constants.KEY_PROVIDEDSOLUTIONARRAY_SORTINGQUESTION, providedSolution);
 	}
 	
@@ -51,7 +51,7 @@ public class ActivityData {
 	}
 
 	/**
-	 * @return the DB entry solution
+	 * @return 
 	 */
 	public ArrayList<Integer> getSolution() {
 		return mSolution;
@@ -65,7 +65,7 @@ public class ActivityData {
 	}
 
 	/**
-	 * @param solution the solution of the DB entry
+	 * @param 
 	 */
 	public void setSolution(ArrayList<Integer> solution) {
 		this.mSolution = solution;

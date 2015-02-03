@@ -52,8 +52,8 @@ public class ActivityApplicationLogic {
 		intent.putExtra(Constants.KEY_QUESTIONORDER, questionsOrderForThisRun);
 		intent.putExtra(Constants.KEY_QUESTIONNUMBER, questionNr);
 		intent.putExtra(Constants.KEY_QUESTIONSCORE, mScore);
-        //intent.setClass(mData.getActivity(), questiontype[mCurrentRandomNumber]);
-		intent.setClass(mData.getActivity(), Constants.ACTIVITYGAPCLASS);
+        intent.setClass(mData.getActivity(), questiontype[mCurrentRandomNumber]);
+		//intent.setClass(mData.getActivity(), Constants.ACTIVITYGAPCLASS);
         mData.getActivity().startActivity(intent);
         
         
