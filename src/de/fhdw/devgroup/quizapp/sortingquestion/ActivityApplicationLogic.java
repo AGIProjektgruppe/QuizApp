@@ -124,13 +124,13 @@ public class ActivityApplicationLogic {
 			Toast.makeText(mActivity.getApplicationContext(), "You are right! Go on with the next question.", Toast.LENGTH_SHORT).show();
 			Intent intent = new Intent();
 			mData.setQuestionScore(mData.getQuestionScore() + 1);
-			if(mData.getQuestionNr() != 3){
+			if(mData.getQuestionNr() != 10){
 			mData.setQuestionNr(mData.getQuestionNr() + 1);
 			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
 			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
 			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
 			
-	        intent.setClass(mData.getActivity(), Constants.ACTIVITYMULTICLASS);
+	        intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
 	        mData.getActivity().startActivity(intent);
 			}
 			else{

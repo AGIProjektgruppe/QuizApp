@@ -17,17 +17,6 @@ public class ActivityApplicationLogic {
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
-	private Class<?>[] questiontype = {Constants.ACTIVITYESTIMATECLASS,
-			Constants.ACTIVITYMULTICLASS,
-			Constants.ACTIVITYPICTURECLASSONE,
-			Constants.ACTIVITYPICTURECLASSTWO,
-			Constants.ACTIVITYSINGLEQUESTIONCLASS,
-			Constants.ACTIVITYSORTINGCLASS,
-			Constants.ACTIVITYTIMEDCLASS
-			};
-	private int[] questionsOrderForThisRun = {1,2,3,4,5,6,7,8,9,10};
-	private int mCurrentRandomNumber;
-	private int questionNr;
 	private int mScore;
 	
 	
@@ -42,32 +31,8 @@ public class ActivityApplicationLogic {
 		
 	}
 
-
-	public void startButtonClicked() {
-		Random rand = new Random();
-		mCurrentRandomNumber = rand.nextInt((6-1)+1)+1;
-		questionsOrderForThisRun = Shuffler.shuffleArray(questionsOrderForThisRun);
-		questionNr = 1;
-		mScore = 0;
-		Intent intent; 
-		intent = new Intent();
-		intent.putExtra(Constants.KEY_QUESTIONORDER, questionsOrderForThisRun);
-		intent.putExtra(Constants.KEY_QUESTIONNUMBER, questionNr);
-		intent.putExtra(Constants.KEY_QUESTIONSCORE, mScore);
-        //intent.setClass(mData.getActivity(), questiontype[mCurrentRandomNumber]);
-		intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
-        mData.getActivity().startActivity(intent);
-        
-        
-	}
-
-
-	public void highscoreButtonClicked() {
+	public void submitScore() {
 		
-		/* Intent intent = new Intent();
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
-        mData.getActivity().startActivity(intent);
-		*/
 	}
 
 }

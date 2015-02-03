@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.constants.Constants;
 /**
  * 
  * @author Tobias Hilger
@@ -14,6 +15,7 @@ public class ActivityInit extends Activity {
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
+	private int mScore;
 	
 	
     @Override
@@ -28,7 +30,12 @@ public class ActivityInit extends Activity {
     }
 
     private void initData(Bundle savedInstanceState) {
-		mData = new ActivityData(savedInstanceState, this);
+    	Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
+		}
+		
+		mData = new ActivityData(savedInstanceState, this, mScore);
 	}
 	
 	private void initGUI() {

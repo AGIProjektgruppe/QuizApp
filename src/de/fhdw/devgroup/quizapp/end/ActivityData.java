@@ -13,9 +13,12 @@ import de.fhdw.devgroup.quizapp.utilities.Shuffler;
 public class ActivityData {
 
 	private ActivityInit mActivity;
+	private int mScore;
 
-	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit) {
+
+	public ActivityData(Bundle savedInstanceState, ActivityInit activityInit, int mScore) {
 		mActivity = activityInit;
+		this.setScore(mScore);
 		if ( savedInstanceState == null ) {  // no data to restore
 			
 		}
@@ -27,7 +30,6 @@ public class ActivityData {
 	}
 
 	private void restoreDataFromBundle(Bundle savedInstanceState) {
-		
 		
 	}
 
@@ -41,6 +43,14 @@ public class ActivityData {
 
 	public void setActivity(ActivityInit mActivity) {
 		this.mActivity = mActivity;
+	}
+
+	public int getScore() {
+		return mScore;
+	}
+
+	public void setScore(int mScore) {
+		this.mScore = mScore;
 	}
 
 }

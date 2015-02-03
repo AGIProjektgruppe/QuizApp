@@ -23,5 +23,5 @@
 	<string name="start_quiz">Start</string>
 	<string name="highscore">Highscore</string>
 
-	<string name="name_eingeben">gib deinen Namen ein, um deine Punktzahl zu speichern</string>
+	<string name="name_eingeben">Gib deinen Namen ein, um deine Punktzahl zu speichern</string>
 </resources>

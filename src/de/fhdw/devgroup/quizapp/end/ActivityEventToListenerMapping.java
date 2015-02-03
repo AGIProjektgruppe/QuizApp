@@ -19,25 +19,13 @@ public class ActivityEventToListenerMapping implements OnClickListener {
 		this.mGUI = mGUI;
 		this.mApplicationLogic = mApplicationLogic;
 		
-		mGUI.getStart().setOnClickListener(this);
-		mGUI.getHighscore().setOnClickListener(this);
+		mGUI.getSubmitName().setOnClickListener(this);
 		
 	}
 
 	@Override
 	public void onClick(View v) {
-		switch(v.getId()){
-		case R.id.start :
-			mApplicationLogic.startButtonClicked();
-			break;
-			
-		case R.id.highscore :
-			mApplicationLogic.highscoreButtonClicked();
-			break;
-		
-		
-		}
-		
+		mApplicationLogic.submitScore();
 	}
 
 }

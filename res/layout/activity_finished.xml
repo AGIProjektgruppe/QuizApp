@@ -2,24 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/custom_button_blue"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/enter_highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:text="@string/name_eingeben"
+        android:textColor="@color/white"
         android:textSize="@dimen/big_text" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="@dimen/Standard_text_size" >
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/submitname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="Button"
+        android:textSize="@dimen/big_text" />
 
 </LinearLayout>

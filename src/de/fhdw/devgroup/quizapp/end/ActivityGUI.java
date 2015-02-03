@@ -1,6 +1,7 @@
 package de.fhdw.devgroup.quizapp.end;
 
 import android.widget.Button;
+import android.widget.EditText;
 import de.fhdw.devgroup.quizapp.R;
 /**
  * 
@@ -9,30 +10,31 @@ import de.fhdw.devgroup.quizapp.R;
  */
 public class ActivityGUI {
 
-	private Button mStart;
-	private Button mHighscore;
+
+	private EditText mUsername;
+	private Button mSubmitName;
 	
 	public ActivityGUI(ActivityInit activityInit) {
 		
-		mStart = (Button) activityInit.findViewById(R.id.start);
-		mHighscore = (Button) activityInit.findViewById(R.id.highscore);
+		mUsername = (EditText) activityInit.findViewById(R.id.username);
+		setSubmitName((Button) activityInit.findViewById(R.id.submitname));		
 
 	}
 
-	public Button getStart() {
-		return mStart;
+	public EditText getUsername() {
+		return mUsername;
 	}
 
-	public void setStart(Button mStart) {
-		this.mStart = mStart;
+	public void setUsername(EditText mUsername) {
+		this.mUsername = mUsername;
 	}
 
-	public Button getHighscore() {
-		return mHighscore;
+	public Button getSubmitName() {
+		return mSubmitName;
 	}
 
-	public void setHighscore(Button mHighscore) {
-		this.mHighscore = mHighscore;
+	public void setSubmitName(Button mSubmitName) {
+		this.mSubmitName = mSubmitName;
 	}
 
 
