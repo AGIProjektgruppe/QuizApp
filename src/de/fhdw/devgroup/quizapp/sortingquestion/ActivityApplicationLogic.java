@@ -129,14 +129,14 @@ public class ActivityApplicationLogic {
 	 public void startNextQuestion(){
 		 Intent intent = new Intent();
 			mData.setQuestionScore(mData.getQuestionScore() + 1);
-			if(mData.getQuestionNr() < 10){
-				mData.setQuestionNr(mData.getQuestionNr() + 1);
-				intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
-				intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
-				intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
-				
-		        intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
-		        mData.getActivity().startActivity(intent);
+			if(mData.getQuestionNr() != 10){
+			mData.setQuestionNr(mData.getQuestionNr() + 1);
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+			
+	        intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
+	        mData.getActivity().startActivity(intent);
 			}
 			else{
 				Toast.makeText(mActivity.getApplicationContext(), "Score: " + mData.getQuestionScore(), Toast.LENGTH_SHORT).show();	
