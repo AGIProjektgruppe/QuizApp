@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import de.fhdw.devgroup.quizapp.R;
 import de.fhdw.devgroup.quizapp.constants.Constants;
-import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 /**
  * 
  * @author Tobias Hilger

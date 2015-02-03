@@ -1,9 +1,7 @@
 package de.fhdw.devgroup.quizapp.sortingquestion;
 
 import android.os.Bundle;
-import android.util.Log;
 import de.fhdw.devgroup.quizapp.constants.Constants;
-import de.fhdw.devgroup.quizapp.utilities.QuestionManager;
 import de.fhdw.devgroup.quizapp.utilities.Shuffler;
 /**
  * 
