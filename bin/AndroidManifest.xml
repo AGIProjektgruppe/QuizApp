@@ -29,6 +29,7 @@
         <activity android:name="de.fhdw.devgroup.quizapp.estimatequestion.Init_TS_V01"></activity>
         <activity android:name="de.fhdw.devgroup.quizapp.singleanswer.Init_SB_V01"></activity>
         <activity android:name="de.fhdw.devgroup.quizapp.timedquestion.Init_RG_V01"></activity>
+        <activity android:name="de.fhdw.devgroup.quizapp.gapquestion.ActivityInit"></activity>
     </application>
 
 </manifest>

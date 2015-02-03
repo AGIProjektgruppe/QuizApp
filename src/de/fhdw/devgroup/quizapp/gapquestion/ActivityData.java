@@ -15,9 +15,15 @@ public class ActivityData {
 	
 	private ActivityInit mActivity;
 	private int mCurrentRandomNumber;
+	private int[] mQuestionOrder;
+	private int mQuestionNr;
+	private int mQuestionScore;
 
-	public ActivityData (Bundle savedInstanceState, ActivityInit act) {
+	public ActivityData (Bundle savedInstanceState, ActivityInit act, int[] questionOrder, int questionNr, int mScore) {
 		mActivity = act;
+		setQuestionOrder(questionOrder);
+		setQuestionNr(questionNr);
+		setQuestionScore(mScore);
 		if ( savedInstanceState == null ) {  // no data to restore
 			Random rand = new Random();
 			//randomnumber between 1-5 to get one of those questions
@@ -46,5 +52,28 @@ public class ActivityData {
 	
 	public ActivityInit getActivity() {
 		return mActivity;
+	}
+	public int getQuestionScore() {
+		return mQuestionScore;
+	}
+
+	public int getQuestionNr() {
+		return mQuestionNr;
+	}
+
+	public int[] getQuestionOrder() {
+		return mQuestionOrder;
+	}
+
+	public void setQuestionOrder(int[] mQuestionOrder) {
+		this.mQuestionOrder = mQuestionOrder;
+	}
+
+	public void setQuestionNr(int mQuestionNr) {
+		this.mQuestionNr = mQuestionNr;
+	}
+
+	public void setQuestionScore(int mQuestionScore) {
+		this.mQuestionScore = mQuestionScore;
 	}
 }

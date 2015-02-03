@@ -23,7 +23,9 @@ public class ActivityApplicationLogic {
 			Constants.ACTIVITYPICTURECLASSTWO,
 			Constants.ACTIVITYSINGLEQUESTIONCLASS,
 			Constants.ACTIVITYSORTINGCLASS,
-			Constants.ACTIVITYTIMEDCLASS
+			Constants.ACTIVITYTIMEDCLASS,
+			Constants.ACTIVITYGAPCLASS
+			
 			};
 	private int[] questionsOrderForThisRun = {1,2,3,4,5,6,7,8,9,10};
 	private int mCurrentRandomNumber;
@@ -41,7 +43,7 @@ public class ActivityApplicationLogic {
 
 	public void startButtonClicked() {
 		Random rand = new Random();
-		mCurrentRandomNumber = rand.nextInt((6-1)+1)+1;
+		mCurrentRandomNumber = rand.nextInt((7-1)+1)+1;
 		questionsOrderForThisRun = Shuffler.shuffleArray(questionsOrderForThisRun);
 		questionNr = 1;
 		mScore = 0;
@@ -51,7 +53,7 @@ public class ActivityApplicationLogic {
 		intent.putExtra(Constants.KEY_QUESTIONNUMBER, questionNr);
 		intent.putExtra(Constants.KEY_QUESTIONSCORE, mScore);
         //intent.setClass(mData.getActivity(), questiontype[mCurrentRandomNumber]);
-		intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
+		intent.setClass(mData.getActivity(), Constants.ACTIVITYGAPCLASS);
         mData.getActivity().startActivity(intent);
         
         
