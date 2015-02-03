@@ -35,7 +35,34 @@ public class ActivityData {
 			mSolution = new int[4];
 			shuffeldQuestionData = new String[4][2]; //Antworten durcheinander würfeln
 			answers = new String[4];
-			extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1")); //Aus der Rückgabe der Datenbankabfrage Antwort, Fragetext und Lösung aufteilen
+			
+			mQuestionText = "sortingquestion_text_"  + questionOrder[questionNr];
+			int lId = this.getActivity().getResources().getIdentifier(mQuestionText, "string", this.getActivity().getPackageName());
+			
+			
+			String answer = "sortingquestion_" + questionOrder[questionNr] + "_answer_1";
+			int id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			answers[0] = this.getActivity().getResources().getString(id);
+			
+			answer = "sortingquestion_" + questionOrder[questionNr] + "_answer_2";
+			id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			answers[1] = this.getActivity().getResources().getString(id);
+			
+			answer = "sortingquestion_" + questionOrder[questionNr] + "_answer_3";
+			id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			answers[2] = this.getActivity().getResources().getString(id);
+			
+			answer = "sortingquestion_" + questionOrder[questionNr] + "_answer_4";
+			id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			answers[3] = this.getActivity().getResources().getString(id);
+			
+			shuffeldQuestionData = Shuffler.shuffleStringArray(answers);
+			
+			for(int i = 0; i< shuffeldQuestionData.length; i++ ){
+				mSolution[i] = Integer.parseInt(shuffeldQuestionData[i][0]);
+				answers[i]=shuffeldQuestionData[i][1];			
+			}	
+			//extractInformationFromDBQuery(QuestionManager.getSortingquestion(this.getActivity() , "S1")); //Aus der Rückgabe der Datenbankabfrage Antwort, Fragetext und Lösung aufteilen
 		}
 		else { 
 			restoreDataFromBundle(savedInstanceState);	
@@ -57,18 +84,18 @@ public class ActivityData {
 		outState.putIntArray(Constants.KEY_CORRECTSOLUTIONARRAY_SORTINGQUESTION, mSolution);
 	}
 	
-	public void extractInformationFromDBQuery(String[] queryresult){
+	/*public void extractInformationFromDBQuery(String[] queryresult){
 		setQuestionText(queryresult[0]);
 		String temp = queryresult[1];
 		String tempParts[] = temp.split(",");
-		Log.d("Data","Splitting done");
+		
 		shuffeldQuestionData = Shuffler.shuffleStringArray(tempParts);
-		Log.d("Data","Shuffeling done");
+		
 		for(int i = 0; i< shuffeldQuestionData.length; i++ ){
 			mSolution[i] = Integer.parseInt(shuffeldQuestionData[i][0]);
 			answers[i]=shuffeldQuestionData[i][1];			
 		}	
-	}
+	}*/
 	
 	public void nextPosition() {
 		mPosition++;

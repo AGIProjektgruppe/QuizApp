@@ -45,7 +45,7 @@ public class ActivityInit extends Activity {
     	Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
-			questionNr = extras.getInt(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONNUMBER);
 			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
 		}
 		mData = new ActivityData(savedInstanceState, this, questionOrder, questionNr ,mScore);

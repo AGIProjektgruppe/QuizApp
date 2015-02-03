@@ -115,6 +115,7 @@ public class ActivityApplicationLogic {
             else if(currentSolution[i] != correctSolution[i] + 1){
             	correct = false;
             	Toast.makeText(mActivity.getApplicationContext(), "You are wrong! Try again.", Toast.LENGTH_SHORT).show();
+            	startNextQuestion();
             }
             else{
             	correct = true;
@@ -122,7 +123,11 @@ public class ActivityApplicationLogic {
 		}
 		if (correct == true){
 			Toast.makeText(mActivity.getApplicationContext(), "You are right! Go on with the next question.", Toast.LENGTH_SHORT).show();
-			Intent intent = new Intent();
+			startNextQuestion();
+		}
+	}
+	 public void startNextQuestion(){
+		 Intent intent = new Intent();
 			mData.setQuestionScore(mData.getQuestionScore() + 1);
 			if(mData.getQuestionNr() != 10){
 			mData.setQuestionNr(mData.getQuestionNr() + 1);
@@ -136,9 +141,8 @@ public class ActivityApplicationLogic {
 			else{
 				Toast.makeText(mActivity.getApplicationContext(), "Score: " + mData.getQuestionScore(), Toast.LENGTH_SHORT).show();	
 			}
-		}
-	}
-	
+		 
+	 }
 	public void refreshGUI(){
 		int currentSolution[] = mData.getProvidedSolution();
 		mGUI.getPosition1().setText(String.valueOf(currentSolution[0]));

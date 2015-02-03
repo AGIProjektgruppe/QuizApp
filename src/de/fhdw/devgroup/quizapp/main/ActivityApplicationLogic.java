@@ -36,12 +36,8 @@ public class ActivityApplicationLogic {
 		
 		this.mActivity = mActivity;
 		this.mData = mData;
-		this.mGUI = mGUI;
-		
-		
-		
+		this.mGUI = mGUI;	
 	}
-
 
 	public void startButtonClicked() {
 		Random rand = new Random();
@@ -55,7 +51,7 @@ public class ActivityApplicationLogic {
 		intent.putExtra(Constants.KEY_QUESTIONNUMBER, questionNr);
 		intent.putExtra(Constants.KEY_QUESTIONSCORE, mScore);
         //intent.setClass(mData.getActivity(), questiontype[mCurrentRandomNumber]);
-		intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
+		intent.setClass(mData.getActivity(), Constants.ACTIVITYSORTINGCLASS);
         mData.getActivity().startActivity(intent);
         
         
