@@ -14,9 +14,9 @@ public class ActivityInit extends Activity{
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
-	int[] questionOrder;
-	int questionNr;
-	int mScore;
+	private int[] questionOrder;
+	private int questionNr;
+	private int mScore;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
