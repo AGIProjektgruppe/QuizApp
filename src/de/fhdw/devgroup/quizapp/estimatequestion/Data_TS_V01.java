@@ -18,19 +18,31 @@ public class Data_TS_V01 {
 	private String btn01Text;
 	private double tolerance = 0.05;
 	private double Answer;
+	private String mQuestionText;
 	
 	// Laden
-	public Data_TS_V01 (Bundle savedInstanceState, Init_TS_V01 act, GUI_TS_V01 gui) {
+	public Data_TS_V01 (Bundle savedInstanceState, Init_TS_V01 act, GUI_TS_V01 gui, int[] questionOrder, int questionNr, int mScore) {
 		mActivity = act;
 		mGUI = gui;
 		if ( savedInstanceState == null ) {
-			setQuestionText("Wieviel Millionäre gibt es in Deutschland?");
-			setAnswer(386000);
+			mQuestionText = "estimatequestion_"  + questionOrder[questionNr] +"_text";
+			int lId = this.getActivity().getResources().getIdentifier(mQuestionText, "string", this.getActivity().getPackageName());
+			questionText = this.getActivity().getResources().getString(lId);
+			
+			
+			String answer = "estimatequestion_" + questionOrder[questionNr] + "_answer";
+			int id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			Answer = Double.parseDouble(this.getActivity().getResources().getString(id));
 			setBtn01Text("Submit");
 		}
 		else {
-			setQuestionText("Wieviel Millionäre gibt es in Deutschland?");
-			setAnswer(386000);
+			mQuestionText = "estimatequestion_text_"  + questionOrder[questionNr];
+			int lId = this.getActivity().getResources().getIdentifier(mQuestionText, "string", this.getActivity().getPackageName());
+			questionText = this.getActivity().getResources().getString(lId);
+			
+			String answer = "estimatequestion_" + questionOrder[questionNr] + "_answer";
+			int id = this.getActivity().getResources().getIdentifier(answer, "string", this.getActivity().getPackageName());		
+			Answer = Double.parseDouble(this.getActivity().getResources().getString(id));
 			setBtn01Text("Submit");
 			restoreDataFromBundle(savedInstanceState);
 		}

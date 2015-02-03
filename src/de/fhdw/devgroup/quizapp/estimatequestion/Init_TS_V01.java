@@ -1,5 +1,6 @@
 package de.fhdw.devgroup.quizapp.estimatequestion;
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -14,6 +15,9 @@ public class Init_TS_V01 extends Activity{
 	private Data_TS_V01 mData;
 	private GUI_TS_V01 mGUI;
 	private ApplicationLogic_TS_V01 mApplicationLogic;
+	private int[] questionOrder;
+	private int questionNr;
+	private int mScore;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,13 @@ public class Init_TS_V01 extends Activity{
 	
 	//Data initialisieren
 	private void initData(Bundle savedInstanceState) {
-		mData = new Data_TS_V01(savedInstanceState, this, mGUI);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONNUMBER);
+			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
+		}
+		mData = new Data_TS_V01(savedInstanceState, this, mGUI, questionOrder, questionNr, mScore);
 	}
 	
 	//GUI initialisieren

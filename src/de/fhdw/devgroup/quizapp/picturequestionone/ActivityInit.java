@@ -30,8 +30,8 @@ public class ActivityInit extends Activity{
 	private void initData(Bundle savedInstanceState) {
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
-			questionOrder = extras.getIntArray("questionOrder");
-			questionNr = extras.getInt("questionNr");
+			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONNUMBER);
 			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
 		}
 		
