@@ -60,9 +60,22 @@ public class ActivityApplicationLogic extends Activity{
 	
 	public void startNewQuestion(){
 		
-		Intent intent = new Intent();
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
-        mData.getActivity().startActivity(intent);
+		if(mData.getQuestionNr() != 10){
+			Intent intent = new Intent();
+			mData.setQuestionNr(mData.getQuestionNr() + 1);
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+	        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSTWO);
+	        mData.getActivity().startActivity(intent);
+			}else{
+				Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent();
+				intent.setClass(mData.getActivity(), Constants.ACTIVITYMAINCLASS);
+				mData.getActivity().startActivity(intent);
+		        mData.getActivity().finish();
+				
+			}
 	}
 	
 	public void checkAnswer(String givenAnswer, String rightAnswer) {

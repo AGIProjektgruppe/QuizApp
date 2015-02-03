@@ -18,7 +18,6 @@ public class ActivityApplicationLogic {
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
 	private Class<?>[] questiontype = {Constants.ACTIVITYESTIMATECLASS,
-			Constants.ACTIVITYMULTICLASS,
 			Constants.ACTIVITYPICTURECLASSONE,
 			Constants.ACTIVITYPICTURECLASSTWO,
 			Constants.ACTIVITYSINGLEQUESTIONCLASS,
@@ -43,7 +42,7 @@ public class ActivityApplicationLogic {
 
 	public void startButtonClicked() {
 		Random rand = new Random();
-		mCurrentRandomNumber = rand.nextInt((7-1)+1)+1;
+		mCurrentRandomNumber = rand.nextInt((6-1)+1)+1;
 		questionsOrderForThisRun = Shuffler.shuffleArray(questionsOrderForThisRun);
 		questionNr = 1;
 		mScore = 0;

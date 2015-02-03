@@ -34,6 +34,7 @@ public class ApplicationLogic_RG_V01 {
 				intent.setClass(mData.getActivity(), mData.getActivity().getClass());
 				//mData.getActivity().finish();
 				mData.getActivity().startActivity(intent);
+				mData.getActivity().finish();
 				
 				//handler.postDelayed(this, 100);
 				//handler.removeCallback(runnable)

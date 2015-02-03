@@ -18,6 +18,7 @@ public class Constants {
 	public static final Class<?> ACTIVITYSINGLEQUESTIONCLASS = de.fhdw.devgroup.quizapp.singleanswer.Init_SB_V01.class;
 	public static final Class<?> ACTIVITYTIMEDCLASS = de.fhdw.devgroup.quizapp.timedquestion.Init_RG_V01.class;
 	public static final Class<?> ACTIVITYGAPCLASS = de.fhdw.devgroup.quizapp.gapquestion.ActivityInit.class;
+	public static final Class<?> ACTIVITYMAINCLASS = de.fhdw.devgroup.quizapp.main.ActivityInit.class;
 
 	// Intent Constants
 	public static final String KEY_QUESTIONORDER = "INT_1";

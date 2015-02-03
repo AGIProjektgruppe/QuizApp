@@ -65,11 +65,14 @@ public class ActivityApplicationLogic extends Activity{
 		intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
 		intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
 		
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYGAPCLASS);
+		intent.setClass(mData.getActivity(), Constants.ACTIVITYGAPCLASS);
         mData.getActivity().startActivity(intent);
 		}
 		else{
 			Toast.makeText(mData.getActivity().getApplicationContext(), "Score: " + mData.getQuestionScore(), Toast.LENGTH_SHORT).show();	
+			intent = new Intent();
+			intent.setClass(mData.getActivity(), Constants.ACTIVITYMAINCLASS);
+	        mData.getActivity().startActivity(intent);
 		}
 	}
 	

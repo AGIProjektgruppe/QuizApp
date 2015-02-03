@@ -65,6 +65,10 @@ public class ActivityApplicationLogic {
         mData.getActivity().startActivity(intent);
 		}else{
 			Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
+			Intent intent = new Intent();
+			intent.setClass(mData.getActivity(), Constants.ACTIVITYMAINCLASS);
+			mData.getActivity().startActivity(intent);
+	        mData.getActivity().finish();
 			
 		}
 	}

@@ -1,5 +1,6 @@
 package de.fhdw.devgroup.quizapp.picturequestiontwo;
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -13,6 +14,9 @@ public class ActivityInit extends Activity{
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityApplicationLogic mApplicationLogic;
+	private int[] questionOrder;
+	private int questionNr;
+	private int mScore;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,13 @@ public class ActivityInit extends Activity{
 	}
 
 	private void initData(Bundle savedInstanceState) {
-		mData = new ActivityData(savedInstanceState, this);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONNUMBER);
+			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
+		}
+		mData = new ActivityData(savedInstanceState, this, questionOrder, questionNr, mScore);
 	}
 	
 	private void initGUI() {

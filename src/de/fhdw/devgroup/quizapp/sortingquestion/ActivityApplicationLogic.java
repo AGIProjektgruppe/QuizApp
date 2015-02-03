@@ -140,6 +140,10 @@ public class ActivityApplicationLogic {
 			}
 			else{
 				Toast.makeText(mActivity.getApplicationContext(), "Score: " + mData.getQuestionScore(), Toast.LENGTH_SHORT).show();	
+				intent = new Intent();
+				intent.setClass(mData.getActivity(), Constants.ACTIVITYMAINCLASS);
+				mData.getActivity().startActivity(intent);
+		        mData.getActivity().finish();
 			}
 		 
 	 }
