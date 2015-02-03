@@ -24,4 +24,6 @@
 	<string name="highscore">Highscore</string>
 
 	<string name="name_eingeben">Gib deinen Namen ein, um deine Punktzahl zu speichern</string>
+	
+	<string name="gap_question">Platzhalter Frage Gap</string>
 </resources>
