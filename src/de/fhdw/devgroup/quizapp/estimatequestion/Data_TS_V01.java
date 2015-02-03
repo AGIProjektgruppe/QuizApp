@@ -19,11 +19,17 @@ public class Data_TS_V01 {
 	private double tolerance = 0.05;
 	private double Answer;
 	private String mQuestionText;
+	private int[] mQuestionOrder;
+	private int mQuestionNr;
+	private int mQuestionScore;
 	
 	// Laden
 	public Data_TS_V01 (Bundle savedInstanceState, Init_TS_V01 act, GUI_TS_V01 gui, int[] questionOrder, int questionNr, int mScore) {
 		mActivity = act;
 		mGUI = gui;
+		setQuestionOrder(questionOrder);
+		setQuestionNr(questionNr);
+		setQuestionScore(mScore);
 		if ( savedInstanceState == null ) {
 			mQuestionText = "estimatequestion_"  + questionOrder[questionNr] +"_text";
 			int lId = this.getActivity().getResources().getIdentifier(mQuestionText, "string", this.getActivity().getPackageName());
@@ -101,5 +107,28 @@ public class Data_TS_V01 {
 	public Init_TS_V01 getActivity() {
 		return mActivity;
 	}
+	
+	public int getQuestionScore() {
+		return mQuestionScore;
+	}
 
+	public int getQuestionNr() {
+		return mQuestionNr;
+	}
+
+	public int[] getQuestionOrder() {
+		return mQuestionOrder;
+	}
+	
+	public void setQuestionOrder(int[] mQuestionOrder) {
+		this.mQuestionOrder = mQuestionOrder;
+	}
+
+	public void setQuestionNr(int mQuestionNr) {
+		this.mQuestionNr = mQuestionNr;
+	}
+
+	public void setQuestionScore(int mQuestionScore) {
+		this.mQuestionScore = mQuestionScore;
+	}
 }
