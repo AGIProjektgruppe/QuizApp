@@ -2,35 +2,35 @@
 <resources>
    
     
-    <string name="estimatequestion_1_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_1_answer">285</string>
+    <string name="estimatequestion_1_text">Wie viel wiegen 1 mio € in 500 € - Scheinen? (kg)</string>
+    <string name="estimatequestion_1_answer">2,24</string>
     
-    <string name="estimatequestion_2_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_2_answer">4100</string>
+    <string name="estimatequestion_2_text">Wann gab es ca. die ersten Geldmünzen? (v. Chr.)</string>
+    <string name="estimatequestion_2_answer">2000</string>
     
-    <string name="estimatequestion_3_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_3_answer">630</string>
+    <string name="estimatequestion_3_text">Was ist das durchschnittliche Jahresbruttolohn in Deutschland im Jahre 2013? (€)</string>
+    <string name="estimatequestion_3_answer">31089</string>
     
-    <string name="estimatequestion_4_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_4_answer">685</string>
+    <string name="estimatequestion_4_text">Wieviele Milliardäre gab es im Jahr 2014 auf der Welt?</string>
+    <string name="estimatequestion_4_answer">1645</string>
     
-    <string name="estimatequestion_5_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_5_answer">885</string>
+    <string name="estimatequestion_5_text">Wie hoch ist das durchschnittliche Privatvermögen der Deutschen? (€)</string>
+    <string name="estimatequestion_5_answer">83000</string>
     
-    <string name="estimatequestion_6_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_6_answer">285</string>
+    <string name="estimatequestion_6_text">Wie viele Millionäre gab es im Jahr 2014 in Deutschland?</string>
+    <string name="estimatequestion_6_answer">386000</string>
     
-    <string name="estimatequestion_7_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_7_answer">4100</string>
+    <string name="estimatequestion_7_text">Wie viele Billionen Dollar umfasste das weltweite Privatevermögen im Jahr 2014?</string>
+    <string name="estimatequestion_7_answer">152</string>
     
-    <string name="estimatequestion_8_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_8_answer">630</string>
+    <string name="estimatequestion_8_text">Um circa wieviel Prozent steigt das asiatische Privatvermögen jährlich?</string>
+    <string name="estimatequestion_8_answer">49</string>
     
-    <string name="estimatequestion_9_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_9_answer">685</string>
+    <string name="estimatequestion_9_text">Wie hoch ist ein Turm aus 1000 Ein-Euro-Münzen? (m)</string>
+    <string name="estimatequestion_9_answer">2,33</string>
     
-    <string name="estimatequestion_10_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="estimatequestion_10_answer">885</string>
+    <string name="estimatequestion_10_text">Wie schwer sind 1000 Ein-Euro-Münzen? (kg)</string>
+    <string name="estimatequestion_10_answer">7,5</string>
     
     
 </resources>
