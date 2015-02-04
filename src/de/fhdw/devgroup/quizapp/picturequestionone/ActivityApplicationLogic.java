@@ -84,6 +84,7 @@ public class ActivityApplicationLogic {
 			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
 			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
 	        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
+	        mData.getActivity().finish();
 	        mData.getActivity().startActivity(intent);
 		}else{
 			Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();

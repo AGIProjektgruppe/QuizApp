@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Toast;
 import de.fhdw.devgroup.quizapp.R;
+import de.fhdw.devgroup.quizapp.constants.Constants;
 
 /**
  * 
@@ -26,16 +28,20 @@ public class ApplicationLogic_RG_V01 {
 	private Runnable runnable = new Runnable() {
 	    @Override
 	    public void run() {
-    		// Activity neu starten
-			Intent intent = new Intent();
-			intent.setClass(mData.getActivity(), mData.getActivity().getClass());
-			//mData.getActivity().finish();
-			mData.getActivity().startActivity(intent);
-			
-			//handler.postDelayed(this, 100);
-			//handler.removeCallback(runnable)
-	    	
-		}
+		    if(mData.getQuestionNr() < 10){
+				Intent intent = new Intent();
+				
+				intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+				intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+				intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+				intent.setClass(mData.getActivity(), Constants.ACTIVITYTIMEDCLASS);
+				mData.getActivity().finish();
+		        mData.getActivity().startActivity(intent);
+				}else{
+					Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
+					
+				}
+	    }
 	   
 	};
 	
@@ -46,7 +52,7 @@ public class ApplicationLogic_RG_V01 {
 		questionId = mData.getquestionId();
 		
 		//set Question
-		String lText = "question_robert_" + questionId + "_text";
+		String lText = "question_r_" + questionId;
 		int lId = mData.getActivity().getResources().getIdentifier(lText, "string", mData.getActivity().getPackageName());
 		mGUI.setTvQuestionText(mData.getActivity().getResources().getString(lId));
 		
@@ -82,6 +88,7 @@ public class ApplicationLogic_RG_V01 {
 		        // For styling purposes because of the "inaccuracy" of the timer
 		        // so the progress will be shown as "full"
 		    	mGUI.getPbTimer().setProgress((int) countdownTime);
+		    	mCountDownTimer.cancel();
 		    	handler.postDelayed(runnable, 0);
 		    }
 		}.start();
@@ -137,6 +144,8 @@ public class ApplicationLogic_RG_V01 {
 			break;
 			
 		}
+		mData.setQuestionNr(mData.getQuestionNr() + 1);
+		mCountDownTimer.cancel();
 	
 		// Delay von 1 sek
 		handler.postDelayed(runnable, 1000);
