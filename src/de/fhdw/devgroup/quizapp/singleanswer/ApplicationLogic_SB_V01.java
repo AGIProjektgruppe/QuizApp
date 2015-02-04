@@ -16,6 +16,7 @@ public class ApplicationLogic_SB_V01 {
 	private Data_SB_V01 mData;
 	private GUI_SB_V01 mGUI;
 	private int questionId;
+	private String rightAnswer;
 	
 	// Handler für einen kurzenTimedelay
 	private Handler handler = new Handler();
@@ -59,7 +60,7 @@ public class ApplicationLogic_SB_V01 {
 		//get answer
 		String answer = "question_s_" + questionId + "_right_answer";
 		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
+		rightAnswer = mData.getActivity().getResources().getString(id);
 		
 	}
 	
@@ -72,7 +73,7 @@ public class ApplicationLogic_SB_V01 {
 			case R.id.btn1:
 			{
 				
-				if(mGUI.getBt1Answer.getText().toString().equals(rightAnswer)){
+				if(mGUI.getBt1Answer().getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt1Answer());
 				}
 				else{
@@ -82,7 +83,7 @@ public class ApplicationLogic_SB_V01 {
 			break;
 			case R.id.btn2:
 			{
-				if((mGUI.getBt2Answer.getText().toString().equals(rightAnswer)){
+				if(mGUI.getBt2Answer().getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt2Answer());
 				}
 				else{
@@ -92,7 +93,7 @@ public class ApplicationLogic_SB_V01 {
 			break;
 			case R.id.btn3:
 			{
-				if((mGUI.getBt3Answer.getText().toString().equals(rightAnswer)){
+				if(mGUI.getBt3Answer().getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt3Answer());
 				}
 				else{
@@ -102,7 +103,7 @@ public class ApplicationLogic_SB_V01 {
 			break;
 			case R.id.btn4:
 			{
-				if((mGUI.getBt4Answer.getText().toString().equals(rightAnswer)){
+				if(mGUI.getBt4Answer().getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt4Answer());
 				}
 				else{

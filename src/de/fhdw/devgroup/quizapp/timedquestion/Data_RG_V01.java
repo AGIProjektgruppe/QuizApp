@@ -19,7 +19,7 @@ public class Data_RG_V01 {
 	private int mQuestionScore;
 	
 	// Laden
-	public Data_RG_V01 (Bundle savedInstanceState, ActivityInit act, int[] questionOrder, int questionNr, int questionScore) {
+	public Data_RG_V01 (Bundle savedInstanceState, Init_RG_V01 act, int[] questionOrder, int questionNr, int questionScore) {
 		mActivity = act;
 		mQuestionOrder =questionOrder;
 		mQuestionNr = questionNr;

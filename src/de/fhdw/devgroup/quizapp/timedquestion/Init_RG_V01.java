@@ -1,5 +1,6 @@
 package de.fhdw.devgroup.quizapp.timedquestion;
 
+import de.fhdw.devgroup.quizapp.constants.Constants;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -37,7 +38,7 @@ public class Init_RG_V01 extends Activity{
 			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
 		}
 		
-		mData = new ActivityData(savedInstanceState, this, questionOrder, questionNr,mScore);
+		mData = new Data_RG_V01(savedInstanceState, this, questionOrder, questionNr,mScore);
 	}
 	
 	//GUI initialisieren 

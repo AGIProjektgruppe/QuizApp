@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="question_r_1">Was ist auf der Rückseite der deutschen 1 € Münze zu sehen?</string>
+    <string name="question_r_1_answer_1">Bundesaldler</string>
+    <string name="question_r_1_answer_2">Pleitegeier</string>
+    <string name="question_r_1_answer_3">Bundesdampfer</string>
+    <string name="question_r_1_answer_4">Bügeleisen</string>
+    <string name="question_r_1_right_answer">Bundesadler</string>
+    
+    <string name="question_r_2">Was ist auf der Rückseite der deutschen 50 Cent Münze zu sehen?</string>
+    <string name="question_r_2_answer_1">Kölner Dom</string>
+    <string name="question_r_2_answer_2">Eichenblatt</string>
+    <string name="question_r_2_answer_3">Brandenburger Tor</string>
+    <string name="question_r_2_answer_4">Koloss von Rhodos</string>
+    <string name="question_r_2_right_answer">Brandenburger Tor</string>
+    
+    <string name="question_r_3">Was ist auf der Rückseite der deutschen 1 Cent Münze zu sehen?</string>
+    <string name="question_r_3_answer_1">Kastanie</string>
+    <string name="question_r_3_answer_2">Gurke</string>
+    <string name="question_r_3_answer_3">Ahorn</string>
+    <string name="question_r_3_answer_4">Eichenzweig</string>
+    <string name="question_r_3_right_answer">Eichenzweig</string>
+    
+    <string name="question_r_4">Was ist auf der Rückseite der belgischen 1 € Münze zu sehen?</string>
+    <string name="question_r_4_answer_1">König August der Starke</string>
+    <string name="question_r_4_answer_2">Prinz Roger</string>
+    <string name="question_r_4_answer_3">Prinz Albert</string>
+    <string name="question_r_4_answer_4">König Albert II.</string>
+    <string name="question_r_4_right_answer">König Albert II.</string>
+    
+    <string name="question_r_5">Was ist auf der Rückseite der estländischen 50 Cent Münze zu sehen?</string>
+    <string name="question_r_5_answer_1">Karte von Estland</string>
+    <string name="question_r_5_answer_2">Ostsee</string>
+    <string name="question_r_5_answer_3">Europa</string>
+    <string name="question_r_5_answer_4">Karte von Riga</string>
+    <string name="question_r_5_right_answer">Karte von Estland</string>
+    
+    <string name="question_r_6">Was ist auf der Rückseite der finischen 1 Cent Münze zu sehen?</string>
+    <string name="question_r_6_answer_1">Bundesaldler</string>
+    <string name="question_r_6_answer_2">Heraldischer Löwe</string>
+    <string name="question_r_6_answer_3">Eisbär</string>
+    <string name="question_r_6_answer_4">König Jürgen der III.</string>
+    <string name="question_r_6_right_answer">Heraldischer Löwe</string>
+    
+    <string name="question_r_7">Was ist auf der Rückseite der finischen 1 € Münze zu sehen?</string>
+    <string name="question_r_7_answer_1">Heraldische Löwe</string>
+    <string name="question_r_7_answer_2">Känguru</string>
+    <string name="question_r_7_answer_3">Fliegende Schwäne</string>
+    <string name="question_r_7_answer_4">Weiße Pferde</string>
+    <string name="question_r_7_right_answer">Fliegende Schwäne</string>
+    
+    <string name="question_r_8">Was ist auf der Rückseite der finischen 2 € Münze zu sehen?</string>
+    <string name="question_r_8_answer_1">Heraldische Löwe</string>
+    <string name="question_r_8_answer_2">Moltebeeren</string>
+    <string name="question_r_8_answer_3">Fliegende Schwäne</string>
+    <string name="question_r_8_answer_4">Waldbeeren</string>
+    <string name="question_r_8_right_answer">Moltebeeren</string>
+    
+    <string name="question_r_9">Was ist auf der Rückseite der französischen 1 Cent Münze zu sehen?</string>
+    <string name="question_r_9_answer_1">Marianne</string>
+    <string name="question_r_9_answer_2">Jean-Claude</string>
+    <string name="question_r_9_answer_3">Jaque</string>
+    <string name="question_r_9_answer_4">Petra</string>
+    <string name="question_r_9_right_answer">Marianne</string>
+    
+    <string name="question_r_10">Was ist auf der Rückseite der französichen 1 € Münze zu sehen?</string>
+    <string name="question_r_10_answer_1">Baum</string>
+    <string name="question_r_10_answer_2">Busch</string>
+    <string name="question_r_10_answer_3">Blume</string>
+    <string name="question_r_10_answer_4">Berg</string>
+    <string name="question_r_10_right_answer">Baum</string>
+    
+ </resources>
