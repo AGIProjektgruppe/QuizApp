@@ -37,10 +37,12 @@ public class ApplicationLogic_TS_V01 {
 		// Die drei möglichen ANtworten abfragen
 		if(mData.getAnswerMin() <= answerUser && answerUser <=mData.getAnswerMax() && answerUser != mData.getAnswer() ){
 			Toast.makeText(mData.getActivity(), "Fast richtig geschätzt! Es sind " + mData.getAnswer(), Toast.LENGTH_SHORT).show();
+			mData.setQuestionScore(mData.getQuestionScore() + 1);
 			startNextQuestion();
 		}
 		else if(answerUser == mData.getAnswer()){
 			Toast.makeText(mData.getActivity(), "Richtig geschätzt!", Toast.LENGTH_SHORT).show();
+			mData.setQuestionScore(mData.getQuestionScore() + 1);
 			startNextQuestion();
 		}
 		else{
@@ -53,7 +55,7 @@ public class ApplicationLogic_TS_V01 {
 	
 	public void startNextQuestion(){
 		 Intent intent = new Intent();
-			mData.setQuestionScore(mData.getQuestionScore() + 1);
+			
 			if(mData.getQuestionNr() != 10){
 			mData.setQuestionNr(mData.getQuestionNr() + 1);
 			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());

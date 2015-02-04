@@ -58,7 +58,7 @@ public class ActivityApplicationLogic extends Activity{
 	public void startNewQuestion(){
 		
 		Intent intent = new Intent();
-		mData.setQuestionScore(mData.getQuestionScore() + 1);
+		
 		if(mData.getQuestionNr() != 10){
 		mData.setQuestionNr(mData.getQuestionNr() + 1);
 		intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
@@ -77,6 +77,7 @@ public class ActivityApplicationLogic extends Activity{
 		if (rightAnswer.equals(givenAnswer)) {
 			//Popup right answer
 			Toast.makeText(mData.getActivity(), "Absolut! Richtige Antort", Toast.LENGTH_SHORT).show();
+			mData.setQuestionScore(mData.getQuestionScore() + 1);
 		}
 		else
 		{

@@ -48,6 +48,7 @@ public class ActivityApplicationLogic {
 		if (rightAnswer.equals(givenAnswer)) {
 			//Popup richtig --> nächste Frage
 			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
+			mData.setQuestionNr(mData.getQuestionNr() + 1);
 		}
 		else
 		{
@@ -57,7 +58,7 @@ public class ActivityApplicationLogic {
 		//restart Activity for new Question
 		if(mData.getQuestionNr() != 10){
 		Intent intent = new Intent();
-		mData.setQuestionNr(mData.getQuestionNr() + 1);
+		
 		intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
 		intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
 		intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
