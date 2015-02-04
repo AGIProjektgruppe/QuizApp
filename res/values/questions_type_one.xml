@@ -4,35 +4,35 @@
     <string name="question_text_init">Wie viel Beispiele sind das?</string>
     <string name="button_text">Bestätigen</string>
     
-    <string name="question_1_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_1_answer">285</string>
+    <string name="question_1_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_1_answer">81</string>
     
-    <string name="question_2_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_2_answer">4100</string>
+    <string name="question_2_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_2_answer">28</string>
     
-    <string name="question_3_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_3_answer">630</string>
+    <string name="question_3_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_3_answer">53</string>
     
-    <string name="question_4_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_4_answer">685</string>
+    <string name="question_4_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_4_answer">97</string>
     
-    <string name="question_5_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_5_answer">885</string>
+    <string name="question_5_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_5_answer">16</string>
     
-    <string name="question_6_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_6_answer">285</string>
+    <string name="question_6_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_6_answer">81</string>
     
-    <string name="question_7_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_7_answer">4100</string>
+    <string name="question_7_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_7_answer">28</string>
     
-    <string name="question_8_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_8_answer">630</string>
+    <string name="question_8_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_8_answer">53</string>
     
-    <string name="question_9_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_9_answer">685</string>
+    <string name="question_9_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_9_answer">97</string>
     
-    <string name="question_10_text">Wie viel Euro sind auf dem Bild zu sehen? (Summe)</string>
-    <string name="question_10_answer">885</string>
+    <string name="question_10_text">Wie viele Cents sind auf dem Bild zu sehen? (Summe)</string>
+    <string name="question_10_answer">16</string>
     
     
 </resources>
