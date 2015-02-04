@@ -11,26 +11,56 @@
     
     <string name="question_2_answer_1">Ungarn</string>
     <string name="question_2_answer_2">Russland</string>
-    <string name="question_2_answer_3">Polen</string>
+    <string name="question_2_answer_3">Deutschland</string>
     <string name="question_2_answer_4">Tschechien</string>
-    <string name="question_2_right_answer">Ungarn</string>
+    <string name="question_2_right_answer">Deutschland</string>
     
     <string name="question_3_answer_1">Kenia</string>
-    <string name="question_3_answer_2">Simbabwe</string>
+    <string name="question_3_answer_2">Indien</string>
     <string name="question_3_answer_3">Thailand</string>
     <string name="question_3_answer_4">Lybien</string>
-    <string name="question_3_right_answer">Lybien</string>
+    <string name="question_3_right_answer">Indien</string>
     
     <string name="question_4_answer_1">Kroatien</string>
     <string name="question_4_answer_2">Bosnien Herzegowina</string>
-    <string name="question_4_answer_3">Thailand</string>
+    <string name="question_4_answer_3">Holland</string>
     <string name="question_4_answer_4">Madagaskar</string>
-    <string name="question_4_right_answer">Thailand</string>
+    <string name="question_4_right_answer">Holland</string>
     
     <string name="question_5_answer_1">Niger</string>
-    <string name="question_5_answer_2">Kenia</string>
+    <string name="question_5_answer_2">Jamaica</string>
     <string name="question_5_answer_3">Südafrika</string>
     <string name="question_5_answer_4">Kongo</string>
-    <string name="question_5_right_answer">Kenia</string>
+    <string name="question_5_right_answer">Jamaica</string>
+    
+    <string name="question_6_answer_1">Russland</string>
+    <string name="question_6_answer_2">Jamaica</string>
+    <string name="question_6_answer_3">Kuba</string>
+    <string name="question_6_answer_4">Kongo</string>
+    <string name="question_6_right_answer">Kuba</string>
+    
+    <string name="question_7_answer_1">Russland</string>
+    <string name="question_7_answer_2">Jamaica</string>
+    <string name="question_7_answer_3">Polen</string>
+    <string name="question_7_answer_4">Tschechien</string>
+    <string name="question_7_right_answer">Polen</string>
+    
+    <string name="question_8_answer_1">Schweden</string>
+    <string name="question_8_answer_2">Dänemark</string>
+    <string name="question_8_answer_3">Polen</string>
+    <string name="question_8_answer_4">Grönland</string>
+    <string name="question_8_right_answer">Schweden</string>
+    
+    <string name="question_9_answer_1">China</string>
+    <string name="question_9_answer_2">Russland</string>
+    <string name="question_9_answer_3">Venezuela</string>
+    <string name="question_9_answer_4">Japan</string>
+    <string name="question_9_right_answer">Venezuela</string>
+    
+    <string name="question_10_answer_1">Ungarn</string>
+    <string name="question_10_answer_2">Russland</string>
+    <string name="question_10_answer_3">Deutschland</string>
+    <string name="question_10_answer_4">Vietnam</string>
+    <string name="question_10_right_answer">Vietnam</string>
     
 </resources>

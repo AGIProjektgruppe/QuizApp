@@ -54,11 +54,16 @@ public final class R {
         public static final int t1_question_8=0x7f02000b;
         public static final int t1_question_9=0x7f02000c;
         public static final int t2_question_1=0x7f02000d;
-        public static final int t2_question_2=0x7f02000e;
-        public static final int t2_question_3=0x7f02000f;
-        public static final int t2_question_4=0x7f020010;
-        public static final int t2_question_5=0x7f020011;
-        public static final int t2_question_init=0x7f020012;
+        public static final int t2_question_10=0x7f02000e;
+        public static final int t2_question_2=0x7f02000f;
+        public static final int t2_question_3=0x7f020010;
+        public static final int t2_question_4=0x7f020011;
+        public static final int t2_question_5=0x7f020012;
+        public static final int t2_question_6=0x7f020013;
+        public static final int t2_question_7=0x7f020014;
+        public static final int t2_question_8=0x7f020015;
+        public static final int t2_question_9=0x7f020016;
+        public static final int t2_question_init=0x7f020017;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090003;
@@ -122,15 +127,15 @@ public final class R {
         public static final int activity_main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f06007e;
-        public static final int answer_placeholder=0x7f060089;
-        public static final int app_name=0x7f060083;
-        public static final int button1_text=0x7f06007f;
-        public static final int button2_text=0x7f060080;
-        public static final int button3_text=0x7f060081;
-        public static final int button4_text=0x7f060082;
+        public static final int action_settings=0x7f060097;
+        public static final int answer_placeholder=0x7f0600a2;
+        public static final int app_name=0x7f06009c;
+        public static final int button1_text=0x7f060098;
+        public static final int button2_text=0x7f060099;
+        public static final int button3_text=0x7f06009a;
+        public static final int button4_text=0x7f06009b;
         public static final int button_text=0x7f06001c;
-        public static final int empty_string=0x7f060087;
+        public static final int empty_string=0x7f0600a0;
         public static final int estimatequestion_10_answer=0x7f060013;
         public static final int estimatequestion_10_text=0x7f060012;
         public static final int estimatequestion_1_answer=0x7f060001;
@@ -156,13 +161,18 @@ public final class R {
         public static final int gap_1_answer_3=0x7f060017;
         public static final int gap_1_answer_4=0x7f060018;
         public static final int gap_1_right_answer=0x7f060019;
-        public static final int gap_question=0x7f06008e;
+        public static final int gap_question=0x7f0600a7;
         public static final int gap_text_1=0x7f060014;
-        public static final int hello_world=0x7f060084;
-        public static final int highscore=0x7f06008c;
-        public static final int name_eingeben=0x7f06008d;
-        public static final int number_placeholder=0x7f060088;
+        public static final int hello_world=0x7f06009d;
+        public static final int highscore=0x7f0600a5;
+        public static final int name_eingeben=0x7f0600a6;
+        public static final int number_placeholder=0x7f0600a1;
         public static final int question_10_answer=0x7f060030;
+        public static final int question_10_answer_1=0x7f060092;
+        public static final int question_10_answer_2=0x7f060093;
+        public static final int question_10_answer_3=0x7f060094;
+        public static final int question_10_answer_4=0x7f060095;
+        public static final int question_10_right_answer=0x7f060096;
         public static final int question_10_text=0x7f06002f;
         public static final int question_1_answer=0x7f06001e;
         public static final int question_1_answer_1=0x7f060065;
@@ -200,18 +210,38 @@ public final class R {
         public static final int question_5_right_answer=0x7f06007d;
         public static final int question_5_text=0x7f060025;
         public static final int question_6_answer=0x7f060028;
+        public static final int question_6_answer_1=0x7f06007e;
+        public static final int question_6_answer_2=0x7f06007f;
+        public static final int question_6_answer_3=0x7f060080;
+        public static final int question_6_answer_4=0x7f060081;
+        public static final int question_6_right_answer=0x7f060082;
         public static final int question_6_text=0x7f060027;
         public static final int question_7_answer=0x7f06002a;
+        public static final int question_7_answer_1=0x7f060083;
+        public static final int question_7_answer_2=0x7f060084;
+        public static final int question_7_answer_3=0x7f060085;
+        public static final int question_7_answer_4=0x7f060086;
+        public static final int question_7_right_answer=0x7f060087;
         public static final int question_7_text=0x7f060029;
         public static final int question_8_answer=0x7f06002c;
+        public static final int question_8_answer_1=0x7f060088;
+        public static final int question_8_answer_2=0x7f060089;
+        public static final int question_8_answer_3=0x7f06008a;
+        public static final int question_8_answer_4=0x7f06008b;
+        public static final int question_8_right_answer=0x7f06008c;
         public static final int question_8_text=0x7f06002b;
         public static final int question_9_answer=0x7f06002e;
+        public static final int question_9_answer_1=0x7f06008d;
+        public static final int question_9_answer_2=0x7f06008e;
+        public static final int question_9_answer_3=0x7f06008f;
+        public static final int question_9_answer_4=0x7f060090;
+        public static final int question_9_right_answer=0x7f060091;
         public static final int question_9_text=0x7f06002d;
         public static final int question_number_t1=0x7f06001a;
         public static final int question_number_t2=0x7f060063;
         public static final int question_text=0x7f060064;
         public static final int question_text_init=0x7f06001b;
-        public static final int question_text_placeholder=0x7f060085;
+        public static final int question_text_placeholder=0x7f06009e;
         public static final int sortingquestion_10_answer_1=0x7f06005f;
         public static final int sortingquestion_10_answer_2=0x7f060060;
         public static final int sortingquestion_10_answer_3=0x7f060061;
@@ -262,9 +292,9 @@ public final class R {
         public static final int sortingquestion_text_7=0x7f06004f;
         public static final int sortingquestion_text_8=0x7f060054;
         public static final int sortingquestion_text_9=0x7f060059;
-        public static final int start_quiz=0x7f06008b;
-        public static final int submit=0x7f06008a;
-        public static final int welcome_text=0x7f060086;
+        public static final int start_quiz=0x7f0600a4;
+        public static final int submit=0x7f0600a3;
+        public static final int welcome_text=0x7f06009f;
     }
     public static final class style {
         /** 
