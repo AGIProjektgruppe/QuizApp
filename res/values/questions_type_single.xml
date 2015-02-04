@@ -1,4 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="question_s_1">Wann wurde die Deutsche Mark eingeführt?</string>
+    <string name="question_s_1_answer_1">1948</string>
+    <string name="question_s_1_answer_2">1945</string>
+    <string name="question_s_1_answer_3">1947</string>
+    <string name="question_s_1_answer_4">1946</string>
+    <string name="question_s_1_right_answer">1948</string>
     
+    <string name="question_s_2">Wann wurde die Mark eingeführt?</string>
+    <string name="question_s_2_answer_1">1872</string>
+    <string name="question_s_2_answer_2">1873</string>
+    <string name="question_s_2_answer_3">1874</string>
+    <string name="question_s_2_answer_4">1871</string>
+    <string name="question_s_2_right_answer">1871</string>
+    
+    <string name="question_s_3">Wann wurde das erste Papiergeld erfunden?</string>
+    <string name="question_s_3_answer_1">1. Jahrhundert</string>
+    <string name="question_s_3_answer_2">4. Jahrhundert</string>
+    <string name="question_s_3_answer_3">9. Jahrhundert</string>
+    <string name="question_s_3_answer_4">5. Jahrhundert</string>
+    <string name="question_s_3_right_answer">9. Jahrhundert</string>
+    
+    <string name="question_s_4">In welchem Land bezahlte man mit Delfingeld?</string>
+    <string name="question_s_4_answer_1">Griechenland</string>
+    <string name="question_s_4_answer_2">Philippinen</string>
+    <string name="question_s_4_answer_3">Zypern</string>
+    <string name="question_s_4_answer_4">Australien</string>
+    <string name="question_s_4_right_answer">Griechenland</string>
+    
+    <string name="question_s_5">In welchem Land zahlte man von 1864 bis 2001 mit "Mark und Pfennig"?</string>
+    <string name="question_s_5_answer_1">Finnland</string>
+    <string name="question_s_5_answer_2">Deutschland</string>
+    <string name="question_s_5_answer_3">Spanien</string>
+    <string name="question_s_5_answer_4">Polen</string>
+    <string name="question_s_5_right_answer">Finnland</string>
+    
+    <string name="question_s_6">Welche Sprachen stehen auf den Euroscheinen?</string>
+    <string name="question_s_6_answer_1">lateinisch und griechisch</string>
+    <string name="question_s_6_answer_2">spanisch und französisch</string>
+    <string name="question_s_6_answer_3">deutsch und polnisch</string>
+    <string name="question_s_6_answer_4">lateinisch und italienisch</string>
+    <string name="question_s_6_right_answer">lateinisch und griechisch </string>
+    
+    <string name="question_s_7">Was ist auf der Rückseite der finischen 1 € Münze zu sehen?</string>
+    <string name="question_s_7_answer_1">Heraldische Löwe</string>
+    <string name="question_s_7_answer_2">Känguru</string>
+    <string name="question_s_7_answer_3">Fliegende Schwäne</string>
+    <string name="question_s_7_answer_4">Weiße Pferde</string>
+    <string name="question_s_7_right_answer">Fliegende Schwäne</string>
+   
+    <string name="question_s_8">Abkürzung EURO?</string>
+    <string name="question_s_8_answer_1">E</string>
+    <string name="question_s_8_answer_2">EU</string>
+    <string name="question_s_8_answer_3">EURO</string>
+    <string name="question_s_8_answer_4">EUR</string>
+    <string name="question_s_8_right_answer">EUR</string>
+    
+    <string name="question_s_9">Wie hieß eines der erste Geldwerte?</string>
+    <string name="question_s_9_answer_1">Obolus</string>
+    <string name="question_s_9_answer_2">Ovolus</string>
+    <string name="question_s_9_answer_3">Odolus</string>
+    <string name="question_s_9_answer_4">Okolus</string>
+    <string name="question_s_9_right_answer">Obolus</string>
+   
+    <string name="question_s_10">Wann wurde der Euro (als Bargeld) eingeführt?</string>
+    <string name="question_s_10_answer_1">1. Januar 2002</string>
+    <string name="question_s_10_answer_2">1. Januar 1999</string>
+    <string name="question_s_10_answer_3">1. Januar 2001</string>
+    <string name="question_s_10_answer_4">1. Januar 2000</string>
+    <string name="question_s_10_right_answer">1. Januar 2002</string>
 </resources>

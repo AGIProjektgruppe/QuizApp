@@ -38,32 +38,53 @@ public class ActivityApplicationLogic {
 	
 	public void onConfirmButtonClicked() {
 		//build string and id to get the right answer from xml file
-		String answer = "question_" + questionId + "_answer";
-		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
-		String rightAnswer = mData.getActivity().getResources().getString(id);
+		String rightAnswer = getRightAnswer();
 		
 		//given answer
 		String givenAnswer = mGUI.getmAnswer().getText().toString() + "";
 		
+		//Check Answers
+		checkAnswer(givenAnswer, rightAnswer);
+		mData.setQuestionNr(mData.getQuestionNr() + 1);
+		//restart or forward to next activity to continue game
+		startNewQuestion();	
+	}
+	
+	public String getRightAnswer() {
+		//build string and id to get the right answer from xml file
+		String answer = "question_" + questionId + "_answer";
+		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
+		String rightAnswer = mData.getActivity().getResources().getString(id);
+		
+		return rightAnswer;
+	}
+	
+	public void checkAnswer(String givenAnswer, String rightAnswer) {
 		if (rightAnswer.equals(givenAnswer)) {
-			//Popup richtig --> nächste Frage
+			//Popup right answer
 			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
 		}
 		else
 		{
-			//Popup leider Falsch --> nächste Frage
+			//Popup wrong answer
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
+			
 		}
 		mData.setQuestionNr(mData.getQuestionNr() + 1);
-		//restart Activity for new Question
-		if(mData.getQuestionNr() < 10){
-		Intent intent = new Intent();
 		
-		intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
-		intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
-		intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
-        mData.getActivity().startActivity(intent);
+	}
+	
+	public void startNewQuestion(){
+        
+		if(mData.getQuestionNr() < 10){
+			
+			Intent intent = new Intent();
+			
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+	        intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSONE);
+	        mData.getActivity().startActivity(intent);
 		}else{
 			Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
 			
