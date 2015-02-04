@@ -1,7 +1,5 @@
 package de.fhdw.devgroup.quizapp.picturequestionone;
 
-import java.util.Random;
-
 import android.os.Bundle;
 
 /**
@@ -26,9 +24,7 @@ public class ActivityData {
 		setQuestionScore(questionScore);
 		
 		if ( savedInstanceState == null ) {  // no data to restore
-			Random rand = new Random();
-			//randomnumber between 1-5 to get one of those questions
-			//next((max-min)+1)+1
+			//get the Random Question ID
 			mQuestionId = questionOrder[questionNr];
 		}
 		else {

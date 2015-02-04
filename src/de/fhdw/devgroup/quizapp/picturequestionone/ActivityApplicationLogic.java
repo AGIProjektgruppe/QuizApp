@@ -48,15 +48,15 @@ public class ActivityApplicationLogic {
 		if (rightAnswer.equals(givenAnswer)) {
 			//Popup richtig --> nächste Frage
 			Toast.makeText(mData.getActivity(), "Juhu Richtig!", Toast.LENGTH_SHORT).show();
-			mData.setQuestionNr(mData.getQuestionNr() + 1);
 		}
 		else
 		{
 			//Popup leider Falsch --> nächste Frage
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
 		}
+		mData.setQuestionNr(mData.getQuestionNr() + 1);
 		//restart Activity for new Question
-		if(mData.getQuestionNr() != 10){
+		if(mData.getQuestionNr() < 10){
 		Intent intent = new Intent();
 		
 		intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());

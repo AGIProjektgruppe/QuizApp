@@ -20,7 +20,7 @@ public class ActivityApplicationLogic extends Activity{
 	public ActivityApplicationLogic(ActivityData mData, ActivityGUI mGUI) {
 		this.mData = mData;
 		this.mGUI = mGUI;
-		randomNumber = mData.getCurrentRandomNumber();
+		randomNumber = mData.getquestionId();
 		
 		//set random image
 		ImageView img = (ImageView) mGUI.getmImage();
@@ -59,10 +59,19 @@ public class ActivityApplicationLogic extends Activity{
 	}
 	
 	public void startNewQuestion(){
-		
-		Intent intent = new Intent();
-        intent.setClass(mData.getActivity(), Constants.ACTIVITYESTIMATECLASS);
-        mData.getActivity().startActivity(intent);
+        
+	    if(mData.getQuestionNr() < 10){
+			Intent intent = new Intent();
+			
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+			intent.setClass(mData.getActivity(), Constants.ACTIVITYPICTURECLASSTWO);
+	        mData.getActivity().startActivity(intent);
+			}else{
+				Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
+				
+			}
 	}
 	
 	public void checkAnswer(String givenAnswer, String rightAnswer) {
@@ -74,7 +83,9 @@ public class ActivityApplicationLogic extends Activity{
 		{
 			//Popup wrong answer
 			Toast.makeText(mData.getActivity(), "Schade, leider Falsch.", Toast.LENGTH_SHORT).show();
+			
 		}
+		mData.setQuestionNr(mData.getQuestionNr() + 1);
 		
 	}
 	
