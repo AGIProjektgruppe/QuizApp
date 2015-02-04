@@ -14,6 +14,9 @@ public class Init_RG_V01 extends Activity{
 	private Data_RG_V01 mData;
 	private GUI_RG_V01 mGUI;
 	private ApplicationLogic_RG_V01 mApplicationLogic;
+	private int[] questionOrder;
+	private int questionNr;
+	private int mScore;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,14 @@ public class Init_RG_V01 extends Activity{
 	
 	//Data initialisieren
 	private void initData(Bundle savedInstanceState) {
-		mData = new Data_RG_V01(savedInstanceState, this);
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			questionOrder = extras.getIntArray(Constants.KEY_QUESTIONORDER);
+			questionNr = extras.getInt(Constants.KEY_QUESTIONNUMBER);
+			mScore = extras.getInt(Constants.KEY_QUESTIONSCORE);
+		}
+		
+		mData = new ActivityData(savedInstanceState, this, questionOrder, questionNr,mScore);
 	}
 	
 	//GUI initialisieren 

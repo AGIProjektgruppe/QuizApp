@@ -18,29 +18,21 @@ public class ApplicationLogic_RG_V01 {
 	private GUI_RG_V01 mGUI;
 	private CountDownTimer mCountDownTimer;
 	private final long countdownTime = 10000;
-	private static int questionsPlayed = 0;
+	private int questionId;
 	
 	// Handler für einen kurzenTimedelay
 	private Handler handler = new Handler();
 	private Runnable runnable = new Runnable() {
 	    @Override
 	    public void run() {
-	    	// Funktioniert nur solange keine 10 Fragen gestellt wurden
-	    	if (questionsPlayed != 9) {
-	    		// Anzahl von gespielten Fragen +1
-	    		questionsPlayed++;
-	    		// Activity neu starten
-				Intent intent = new Intent();
-				intent.setClass(mData.getActivity(), mData.getActivity().getClass());
-				//mData.getActivity().finish();
-				mData.getActivity().startActivity(intent);
-				
-				//handler.postDelayed(this, 100);
-				//handler.removeCallback(runnable)
-	    	}
-	    	else{
-	    		//wechsle ins HauptMenu
-	    	}
+    		// Activity neu starten
+			Intent intent = new Intent();
+			intent.setClass(mData.getActivity(), mData.getActivity().getClass());
+			//mData.getActivity().finish();
+			mData.getActivity().startActivity(intent);
+			
+			//handler.postDelayed(this, 100);
+			//handler.removeCallback(runnable)
 	    	
 		}
 	   
@@ -50,15 +42,27 @@ public class ApplicationLogic_RG_V01 {
 	public ApplicationLogic_RG_V01(Data_RG_V01 mData, final GUI_RG_V01 mGUI) {
 		this.mData = mData;
 		this.mGUI = mGUI;
-				
+		questionId = mData.getquestionId();
+		
 		//set Question
-		mGUI.setTvQuestionText(mData.getQuestionText());
+		String lText = "question_robert_" + questionId + "_text";
+		int lId = mData.getActivity().getResources().getIdentifier(lText, "string", mData.getActivity().getPackageName());
+		mGUI.setTvQuestionText(mData.getActivity().getResources().getString(lId));
 		
 		//set Answer
-		mGUI.setBtn01AnswerText(mData.getBtn01Text());
-		mGUI.setBtn02AnswerText(mData.getBtn02Text());
-		mGUI.setBtn03AnswerText(mData.getBtn03Text());
-		mGUI.setBtn04AnswerText(mData.getBtn04Text());
+		String lButton1 = "question_r_" + questionId + "_answer_1";
+		String lButton2 = "question_r_" + questionId + "_answer_2";
+		String lButton3 = "question_r_" + questionId + "_answer_3";
+		String lButton4 = "question_r_" + questionId + "_answer_4";
+		mGUI.setBtn01AnswerText(mData.getActivity().getResources().getString(mData.getActivity().getResources().getIdentifier(lButton1, "string", mData.getActivity().getPackageName())));
+		mGUI.setBtn02AnswerText(mData.getActivity().getResources().getString(mData.getActivity().getResources().getIdentifier(lButton2, "string", mData.getActivity().getPackageName())));
+		mGUI.setBtn03AnswerText(mData.getActivity().getResources().getString(mData.getActivity().getResources().getIdentifier(lButton3, "string", mData.getActivity().getPackageName())));
+		mGUI.setBtn04AnswerText(mData.getActivity().getResources().getString(mData.getActivity().getResources().getIdentifier(lButton4, "string", mData.getActivity().getPackageName())));
+		
+		//get answer
+		String answer = "question_r_" + questionId + "_right_answer";
+		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
+		String rightAnswer = mData.getActivity().getResources().getString(id);
 		
 		//set Timer for progressbar
 		mGUI.getPbTimer().setMax((int)countdownTime);
@@ -91,7 +95,8 @@ public class ApplicationLogic_RG_V01 {
 		{
 			case R.id.btn1:
 			{
-				if(mData.getAnswer()==1){
+				
+				if(mGUI.getBt1Answer.getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt1Answer());
 				}
 				else{
@@ -101,7 +106,7 @@ public class ApplicationLogic_RG_V01 {
 			break;
 			case R.id.btn2:
 			{
-				if(mData.getAnswer()==2){
+				if((mGUI.getBt2Answer.getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt2Answer());
 				}
 				else{
@@ -111,7 +116,7 @@ public class ApplicationLogic_RG_V01 {
 			break;
 			case R.id.btn3:
 			{
-				if(mData.getAnswer()==3){
+				if((mGUI.getBt3Answer.getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt3Answer());
 				}
 				else{
@@ -121,7 +126,7 @@ public class ApplicationLogic_RG_V01 {
 			break;
 			case R.id.btn4:
 			{
-				if(mData.getAnswer()==4){
+				if((mGUI.getBt4Answer.getText().toString().equals(rightAnswer)){
 					mGUI.setColorBtnTrue(mGUI.getBt4Answer());
 				}
 				else{

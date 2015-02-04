@@ -10,23 +10,23 @@ import android.os.Bundle;
 
 public class Data_SB_V01 {
 	
+	private static final String CURRENTQUESTIONNUMBER = "K1";
+	
 	private Init_SB_V01 mActivity;
-	private String questionText;
-	private String btn01Text;
-	private String btn02Text;
-	private String btn03Text;
-	private String btn04Text;
-	private int Answer;
+	private int mQuestionId;
+	private int[] mQuestionOrder;
+	private int mQuestionNr;
+	private int mQuestionScore;
 	
 	// Laden
-	public Data_SB_V01 (Bundle savedInstanceState, Init_SB_V01 act) {
+	public Data_SB_V01 (Bundle savedInstanceState, ActivityInit act, int[] questionOrder, int questionNr, int questionScore) {
 		mActivity = act;
+		mQuestionOrder =questionOrder;
+		mQuestionNr = questionNr;
+		setQuestionScore(questionScore);
+		
 		if ( savedInstanceState == null ) {
-			setAnswer(3);
-			setBtn01Text("Antwort 1");
-			setBtn02Text("Antwort 2");
-			setBtn03Text("Antwort 3");
-			setBtn04Text("Antwort 4");
+			mQuestionId = questionOrder[questionNr];
 		}
 		else {
 			restoreDataFromBundle(savedInstanceState);
@@ -35,68 +35,41 @@ public class Data_SB_V01 {
 	
 	// save 
 	public void saveDataInBundle(Bundle b) {
-		// ?
+		b.putInt(CURRENTQUESTIONNUMBER, mQuestionId);
 	}
 	
-	// restore
+	//restore
 	public void restoreDataFromBundle(Bundle b) {
-		// ?
+		mQuestionId = b.getInt(CURRENTQUESTIONNUMBER);
 	}
 	
-	// change data
-	
-	// Fragetext zurückgeben
-	public String getQuestionText() {
-		return questionText;
-	}
-	
-	// Fragetext setzen
-	public void setQuestionText(String questionText) {
-		this.questionText = questionText;
-	}
-	
-	// ButtonText01 zurückgeben
-	public String getBtn01Text() {
-		return btn01Text;
-	}
-	
-	// ButtonText01 setzen
-	public void setBtn01Text(String btn01Text) {
-		this.btn01Text = btn01Text;
-	}
-	
-	public String getBtn02Text() {
-		return btn02Text;
+	//getter und setter
+	public int getquestionId() {
+		return mQuestionId;
 	}
 
-	public void setBtn02Text(String btn02Text) {
-		this.btn02Text = btn02Text;
+	public int[] getQuestionOrder() {
+		return mQuestionOrder;
 	}
 
-	public String getBtn03Text() {
-		return btn03Text;
+	public void setQuestionOrder(int[] questionOrder) {
+		this.mQuestionOrder = questionOrder;
 	}
 
-	public void setBtn03Text(String btn03Text) {
-		this.btn03Text = btn03Text;
+	public int getQuestionNr() {
+		return mQuestionNr;
 	}
 
-	public String getBtn04Text() {
-		return btn04Text;
+	public void setQuestionNr(int mQuestionNr) {
+		this.mQuestionNr = mQuestionNr;
 	}
 
-	public void setBtn04Text(String btn04Text) {
-		this.btn04Text = btn04Text;
+	public int getQuestionScore() {
+		return mQuestionScore;
 	}
-	
-	// Antwort zürckgeben
-	public int getAnswer() {
-		return Answer;
-	}
-	
-	// Antwort setzen
-	public void setAnswer(int answer) {
-		Answer = answer;
+
+	public void setQuestionScore(int mQuestionScore) {
+		this.mQuestionScore = mQuestionScore;
 	}
 	
 	public Init_SB_V01 getActivity() {
