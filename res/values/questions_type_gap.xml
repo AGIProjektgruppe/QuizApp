@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    	<string name="gap_text_1">Zu _______ Land gehört die abgebildete Währung?</string>
-        <string name="gap_1_answer_1">was</string>
-    	<string name="gap_1_answer_2">welchem</string>
-    	<string name="gap_1_answer_3">waaaaat</string>
-    	<string name="gap_1_answer_4">test</string>
-    	<string name="gap_1_right_answer">welchem</string>
+    	<string name="gap_text_1">Das Papiergeld wurde in __________ erfunden.</string>
+        <string name="gap_1_answer_1">Deutschland</string>
+    	<string name="gap_1_answer_2">England</string>
+    	<string name="gap_1_answer_3">China</string>
+    	<string name="gap_1_answer_4">Japan</string>
+    	<string name="gap_1_right_answer">China</string>
+    	
+    	<string name="gap_text_2">Banknoten werden in eienr sogenannten __________ hergestellt.</string>
+        <string name="gap_2_answer_1">Notenpresse</string>
+    	<string name="gap_2_answer_2">Bankpresse</string>
+    	<string name="gap_2_answer_3">Notendruckerei</string>
+    	<string name="gap_2_answer_4">Notenbank</string>
+    	<string name="gap_2_right_answer">Notenpresse</string>
+    	
+    	
+    	<string name="gap_text_3">Bei einer _______ wird das Geld weniger wert.</string>
+        <string name="gap_3_answer_1">Deflation</string>
+    	<string name="gap_3_answer_2">Inflation</string>
+    	<string name="gap_3_answer_3">Geldmittelknappheit</string>
+    	<string name="gap_3_answer_4">Insolvenz</string>
+    	<string name="gap_3_right_answer">Inflation</string>
+    	
+    	
+    	<string name="gap_text_4">Ohne ______ nichts los.</string>
+        <string name="gap_4_answer_1">Moos</string>
+    	<string name="gap_4_answer_2">Geld</string>
+    	<string name="gap_4_answer_3">Moneten</string>
+    	<string name="gap_4_answer_4">Kreuzer</string>
+    	<string name="gap_4_right_answer">Moos</string>
+    	
+    	
+    	<string name="gap_text_5">Wer den Kreutzer nicht ehrt, ist des ___________.</string>
+        <string name="gap_5_answer_1">Talers nicht wert</string>
+    	<string name="gap_5_answer_2">Geldes nicht wert</string>
+    	<string name="gap_5_answer_3">Bettlers Feind</string>
+    	<string name="gap_5_answer_4">Glücks nicht hold</string>
+    	<string name="gap_5_right_answer">Talers nicht wert</string>
+    	
+    	
+    	<string name="gap_text_6">Wer Geld Anlegen will, der kann _________</string>
+        <string name="gap_6_answer_1">investieren</string>
+    	<string name="gap_6_answer_2">internieren</string>
+    	<string name="gap_6_answer_3">intensivieren</string>
+    	<string name="gap_6_answer_4">inhalieren</string>
+    	<string name="gap_6_right_answer">investieren</string>
+    	
+    	<string name="gap_text_1">Geld _______ die Welt</string>
+        <string name="gap_1_answer_1">regiert</string>
+    	<string name="gap_1_answer_2">regelt</string>
+    	<string name="gap_1_answer_3">reguliert</string>
+    	<string name="gap_1_answer_4">reintegriert</string>
+    	<string name="gap_1_right_answer">regiert</string>
+    	
+    	<string name="gap_text_8">Geld ist jedes allgemein anerkannte _________________.</string>
+        <string name="gap_8_answer_1">Tausch- und Zahlungsmittel</string>
+    	<string name="gap_8_answer_2">Bestechungmittel</string>
+    	<string name="gap_8_answer_3">Verwaltungsmittel</string>
+    	<string name="gap_8_answer_4">Bereicherungsmittel</string>
+    	<string name="gap_8_right_answer">Tausch- und Zahlungsmittel</string>
     
     
+        <string name="gap_text_9">Die besten Dinge im Leben sind nicht die, die man _____________.</string>
+        <string name="gap_9_answer_1">geschenkt bekommt.</string>
+    	<string name="gap_9_answer_2">für Geld bekommt.</string>
+    	<string name="gap_9_answer_3">sehen kann.</string>
+    	<string name="gap_9_answer_4">essen kann.</string>
+    	<string name="gap_9_right_answer">für Geld bekommt</string>
+    	
+    	<string name="gap_text_10">Ein reicher Mann ist oft nur ein _____________ mit sehr viel Geld.</string>
+        <string name="gap_10_answer_1">reicher Mann</string>
+    	<string name="gap_10_answer_2">großer Mann</string>
+    	<string name="gap_10_answer_3">kleiner Mann</string>
+    	<string name="gap_10_answer_4">armer Mann</string>
+    	<string name="gap_10_right_answer">armer Mann</string>
+    	
+    	
 </resources>
