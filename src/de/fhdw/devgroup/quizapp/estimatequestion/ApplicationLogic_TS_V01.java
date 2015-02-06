@@ -14,6 +14,8 @@ import android.content.Intent;
 
 public class ApplicationLogic_TS_V01 {
 	
+	// Dateninitialisierung
+	
 	private Data_TS_V01 mData;
 	private GUI_TS_V01 mGUI;
 	private double answerUser;
@@ -24,28 +26,32 @@ public class ApplicationLogic_TS_V01 {
 		this.mData = mData;
 		this.mGUI = mGUI;
 				
-		//set Question
+		//Frage aus XML einlesen
 		mGUI.setTvQuestionText(mData.getQuestionText());
 			
 	}
 	
-	// event handling
+	// Antwort abholen
 	public void onButtonClicked(View v) {
 		
 		answerUser = Double.parseDouble(mGUI.getEtAnswer().getText().toString());
 		
-		// Die drei möglichen ANtworten abfragen
-		if(mData.getAnswerMin() <= answerUser && answerUser <=mData.getAnswerMax() && answerUser != mData.getAnswer() ){
+		// Die drei möglichen Antworten abfragen
+		if(
+			// Falls die Antwort im Toleranzbereich liegt	
+			mData.getAnswerMin() <= answerUser && answerUser <=mData.getAnswerMax() && answerUser != mData.getAnswer() ){
 			Toast.makeText(mData.getActivity(), "Fast richtig geschätzt! Es sind " + mData.getAnswer(), Toast.LENGTH_SHORT).show();
 			mData.setQuestionScore(mData.getQuestionScore() + 1);
 			startNextQuestion();
 		}
 		else if(answerUser == mData.getAnswer()){
+			//Falls Antwort richtig
 			Toast.makeText(mData.getActivity(), "Richtig geschätzt!", Toast.LENGTH_SHORT).show();
 			mData.setQuestionScore(mData.getQuestionScore() + 1);
 			startNextQuestion();
 		}
 		else{
+			//Falsche Antwort
 			Toast.makeText(mData.getActivity(), "Falsch geschätzt!", Toast.LENGTH_SHORT).show();
 			startNextQuestion();
 		}
@@ -55,6 +61,9 @@ public class ApplicationLogic_TS_V01 {
 	
 	public void startNextQuestion(){
 		 Intent intent = new Intent();
+		 
+		 	//Wenn das Ende der Fragenreihe nicht erreicht ist, nächste Frage starten
+		 	// Sonst Score anzeigen
 			
 			if(mData.getQuestionNr() != 10){
 			mData.setQuestionNr(mData.getQuestionNr() + 1);

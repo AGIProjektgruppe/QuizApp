@@ -9,13 +9,14 @@ import android.os.Bundle;
  * @author Thomas Schmiedel
  * @version 1.0
  */
-
+//Datenklasse
 public class Data_TS_V01 {
 	
 	private Init_TS_V01 mActivity;
 	private GUI_TS_V01 mGUI;
 	private String questionText;
 	private String btn01Text;
+	// Toleranzwert kann geändert werden, falls die Fragen zu schwierig oder zu leicht eingeschätzt werden.
 	private double tolerance = 0.05;
 	private double Answer;
 	private String mQuestionText;
@@ -89,12 +90,12 @@ public class Data_TS_V01 {
 		return Answer;
 	}
 	
-	// Antwort + 10% zurückgeben
+	// Antwort + 5% zurückgeben
 	public double getAnswerMax() {
 		return Answer*(1+tolerance);
 	}
 	
-	// Antwort - 10% zurückgeben
+	// Antwort - 5% zurückgeben
 	public double getAnswerMin() {
 		return Answer*(1-tolerance);
 	}
