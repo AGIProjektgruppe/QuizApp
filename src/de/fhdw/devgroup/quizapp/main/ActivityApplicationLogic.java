@@ -45,7 +45,7 @@ public class ActivityApplicationLogic {
 		Random rand = new Random();
 		mCurrentRandomNumber = rand.nextInt((7-1)+1)+1;
 		questionsOrderForThisRun = Shuffler.shuffleArray(questionsOrderForThisRun);
-		questionNr = 1;
+		questionNr = 0;
 		mScore = 0;
 		Intent intent; 
 		intent = new Intent();
