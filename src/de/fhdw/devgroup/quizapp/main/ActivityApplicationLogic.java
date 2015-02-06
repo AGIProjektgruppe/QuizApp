@@ -17,13 +17,14 @@ public class ActivityApplicationLogic {
 	private ActivityData mData;
 	private ActivityGUI mGUI;
 	private ActivityInit mActivity;
-	private Class<?>[] questiontype = {Constants.ACTIVITYESTIMATECLASS,
-			Constants.ACTIVITYMULTICLASS,
+	private Class<?>[] questiontype = {
+			//Constants.ACTIVITYTIMEDCLASS,
+			Constants.ACTIVITYESTIMATECLASS,
+			//Constants.ACTIVITYMULTICLASS,
 			Constants.ACTIVITYPICTURECLASSONE,
 			Constants.ACTIVITYPICTURECLASSTWO,
 			Constants.ACTIVITYSINGLEQUESTIONCLASS,
 			Constants.ACTIVITYSORTINGCLASS,
-			Constants.ACTIVITYTIMEDCLASS,
 			Constants.ACTIVITYGAPCLASS
 			
 			};
@@ -43,7 +44,7 @@ public class ActivityApplicationLogic {
 
 	public void startButtonClicked() {
 		Random rand = new Random();
-		mCurrentRandomNumber = rand.nextInt((7-1)+1)+1;
+		mCurrentRandomNumber = rand.nextInt((5-1)+1)+1;
 		questionsOrderForThisRun = Shuffler.shuffleArray(questionsOrderForThisRun);
 		questionNr = 0;
 		mScore = 0;
