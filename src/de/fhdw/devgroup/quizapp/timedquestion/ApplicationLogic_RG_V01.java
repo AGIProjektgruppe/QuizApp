@@ -23,24 +23,27 @@ public class ApplicationLogic_RG_V01 {
 	private int questionId;
 	private String rightAnswer;
 	
-	// Handler f�r einen kurzenTimedelay
+	// Handler für einen kurzenTimedelay
 	private Handler handler = new Handler();
 	private Runnable runnable = new Runnable() {
 	    @Override
 	    public void run() {
-		    if(mData.getQuestionNr() < 10){
-				Intent intent = new Intent();
-				
-				intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
-				intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
-				intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
-				intent.setClass(mData.getActivity(), Constants.ACTIVITYTIMEDCLASS);
-				mData.getActivity().finish();
-		        mData.getActivity().startActivity(intent);
-				}else{
-					Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
-					
-				}
+	    	if(mData.getQuestionNr() < 10){
+	    		// Vorbereitung für neu Aufruf der nächsten Activitiy
+			Intent intent = new Intent();
+			// Übergabe der globalen Parameter
+			intent.putExtra(Constants.KEY_QUESTIONORDER, mData.getQuestionOrder());
+			intent.putExtra(Constants.KEY_QUESTIONNUMBER, mData.getQuestionNr());
+			intent.putExtra(Constants.KEY_QUESTIONSCORE, mData.getQuestionScore());
+			intent.setClass(mData.getActivity(), Constants.ACTIVITYTIMEDCLASS);
+			// Beendet alte Activity
+			mData.getActivity().finish();
+	        	mData.getActivity().startActivity(intent);
+		}else{
+			// Ende nach 10 Fragen
+			Toast.makeText(mData.getActivity(), "Fertig!", Toast.LENGTH_SHORT).show();
+			
+		}
 	    }
 	   
 	};
@@ -71,23 +74,23 @@ public class ApplicationLogic_RG_V01 {
 		int id = mData.getActivity().getResources().getIdentifier(answer, "string", mData.getActivity().getPackageName());		
 		rightAnswer = mData.getActivity().getResources().getString(id);
 		
-		//set Timer for progressbar
+		//set Timer für progressbar
 		mGUI.getPbTimer().setMax((int)countdownTime);
 		
-		// Timer f�r die Progressbar
+		// Timer für die Progressbar
 		mCountDownTimer = new CountDownTimer(countdownTime, 10) 
 		{
 		    // Berechnung wie viel Zeit schon vergangen ist
 		    public void onTick(long millisUntilFinished) {
 		      millisUntilFinished = countdownTime - millisUntilFinished;
-
+		      // Setzt die Progressbar auf die vergangene Zeit
 		      mGUI.getPbTimer().setProgress((int) millisUntilFinished);
 		    }
 
 		    public void onFinish() {
-		        // For styling purposes because of the "inaccuracy" of the timer
-		        // so the progress will be shown as "full"
+			// Setzt die Progressbar auf die maximal vergangene Zeit (countdownTime)
 		    	mGUI.getPbTimer().setProgress((int) countdownTime);
+		    	// Beendet den Timer
 		    	mCountDownTimer.cancel();
 		    	handler.postDelayed(runnable, 0);
 		    }
@@ -98,7 +101,7 @@ public class ApplicationLogic_RG_V01 {
 	// event handling
 	public void onButtonClicked(View v) {
 		
-		// Je nach dem welcher Button gedr�ckt wurde, wird geschaut ob die richtige Antwort gedr�ckt wurde
+		// Je nach dem welcher Button gedrückt wurde, wird geschaut ob die richtige Antwort gedrückt wurde
 		switch (v.getId())
 		{
 			case R.id.btn1:
@@ -144,7 +147,9 @@ public class ApplicationLogic_RG_V01 {
 			break;
 			
 		}
+		// Zählt die Anzahl abgefragter Fragen bis jetzt eins hoch
 		mData.setQuestionNr(mData.getQuestionNr() + 1);
+		// Beendet den Timer
 		mCountDownTimer.cancel();
 	
 		// Delay von 1 sek
